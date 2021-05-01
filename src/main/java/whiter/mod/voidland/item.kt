@@ -31,6 +31,7 @@ class ItemBase(@Nonnull name: String) : Item(), IHasModel {
     init {
         unlocalizedName = vl.modid + "." + name
         setRegistryName(name)
+        setCreativeTab(blocks.creativeTab)
         items.data.add(this)
     }
 }

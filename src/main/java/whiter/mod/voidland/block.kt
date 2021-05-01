@@ -14,6 +14,8 @@ import javax.annotation.Nonnull
 
 object blocks {
     val data = arrayListOf<Block>()
+    val list = mutableMapOf<String, Block>()
+    val creativeTab = CreativeTab()
 
     @SideOnly(Side.CLIENT)
     fun initModels(event: ModelRegistryEvent) {
@@ -29,25 +31,42 @@ object blocks {
             event.registry.register(block)
         }
     }
-
-//    @SideOnly(Side.CLIENT)
-//    fun registerItems(event: RegistryEvent.Register<Item>) {
-//        for (block in data) {
-//            if (block is IHasItem) {
-//                (block as IHasItem).registerItem(event)
-//            }
-//        }
-//    }
 }
+
+
+class BlockSample : BlockBaseWithItem(Material.ROCK, "sample_block") {
+    init {
+        blocks.list["sample_block"] = this
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 open class BlockBase(mat: Material, @Nonnull name: String) : Block(mat), IHasModel {
     init {
         unlocalizedName = vl.modid + "." + name
         setRegistryName(name)
+        setCreativeTab(blocks.creativeTab)
         blocks.data.add(this)
     }
 }
-class BlockBaseWithItem(mat: Material, @Nonnull name: String) : BlockBase(mat, name), IHasItem {
+open class BlockBaseWithItem(mat: Material, @Nonnull name: String) : BlockBase(mat, name), IHasItem {
     var item: ItemBlock
     init {
         unlocalizedName = vl.modid + "." + name
