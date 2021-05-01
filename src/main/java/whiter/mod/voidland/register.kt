@@ -25,6 +25,8 @@ object vlregister {
         val sample_item = ItemBase("sample_item")
         val sampel_block = BlockBaseWithItem(Material.WOOD, "sample_block")
         val block_sieve = BlockBaseWithItem(Material.WOOD, "block_sieve")
+
+
     }
 
 
