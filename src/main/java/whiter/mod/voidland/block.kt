@@ -7,7 +7,6 @@ import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.event.RegistryEvent
 import net.minecraftforge.fml.relauncher.Side
 import net.minecraftforge.fml.relauncher.SideOnly
-import whiter.mod.voidland.util.IHasItem
 import whiter.mod.voidland.util.IHasModel
 import javax.annotation.Nonnull
 
@@ -66,15 +65,8 @@ open class BlockBase(mat: Material, @Nonnull name: String) : Block(mat), IHasMod
         blocks.data.add(this)
     }
 }
-open class BlockBaseWithItem(mat: Material, @Nonnull name: String) : BlockBase(mat, name), IHasItem {
-    var item: ItemBlock
-    init {
-        unlocalizedName = vl.modid + "." + name
-        item = ItemBlock(this)
-        item.setRegistryName(name)
-        items.data.add(item)
-        blocks.data.add(this)
-    }
+open class BlockBaseWithItem(mat: Material, @Nonnull name: String) : BlockBase(mat, name) {
+    var item: ItemBlock = ItemBlockBase(this)
 }
 
 

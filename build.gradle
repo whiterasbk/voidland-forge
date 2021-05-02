@@ -22,7 +22,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.0'
-group = 'whiter.mod.voidlan' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'whiter.mod.voidland' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'voidland'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
@@ -78,6 +78,7 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2855'
     compile group: "net.shadowfacts", name: "Forgelin", version: "1.8.3"
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"
@@ -118,6 +119,10 @@ jar {
 jar.finalizedBy('reobfJar') 
 // However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
 //publish.dependsOn('reobfJar')
+
+test {
+    useJUnitPlatform()
+}
 
 publishing {
     publications {

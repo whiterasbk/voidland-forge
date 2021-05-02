@@ -30,9 +30,3 @@ interface IHasModel {
     }
 
 }
-
-interface IHasItem {
-
-}
-
-

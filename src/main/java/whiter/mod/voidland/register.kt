@@ -12,6 +12,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.Logger
+import net.minecraft.world.DimensionType
+import net.minecraftforge.common.DimensionManager
+
 
 object vlregister {
 
@@ -22,18 +25,20 @@ object vlregister {
     fun onPreInit(event: FMLPreInitializationEvent) {
         logger = event.modLog
 
+        // register blocks & items
         val sample_item = ItemBase("sample_item")
-//        val sampel_block = BlockBaseWithItem(Material.WOOD, "sample_block")
         val sampel_block = BlockSample()
         val block_sieve = BlockBaseWithItem(Material.WOOD, "block_sieve")
 
+        // register Dimension
+        vl.dimType = DimensionType.register("vl_dimension", "_vl_dim", vl.dimID, VlWorldProvider::class.java, false)
+        DimensionManager.registerDimension(vl.dimID, vl.dimType)
 
     }
 
 
 
     fun onRegisterBlocks(event: RegistryEvent.Register<Block>) {
-
         logger.log(Level.DEBUG, "onRegisterBlocks")
         println("voidland:onRegisterBlocks")
         blocks.register(event)
@@ -56,6 +61,7 @@ object vlregister {
     fun onRegisterItemsLowest(event: RegistryEvent.Register<Item>) {
 
     }
+
     fun onRecipeRegistry(event: RegistryEvent.Register<IRecipe>) {}
     fun onRegisterEnchantments(event: RegistryEvent.Register<Enchantment>) {}
 
@@ -64,6 +70,12 @@ object vlregister {
     fun onInit(event: FMLInitializationEvent) {
 
     }
-    fun onPostInit(event: FMLPostInitializationEvent) {}
+
+    fun onPostInit(event: FMLPostInitializationEvent) {
+
+        // check blocks & items
+        println(items.data)
+        println(blocks.data)
+    }
 
 }

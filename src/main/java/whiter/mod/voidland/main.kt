@@ -10,6 +10,9 @@ import net.minecraftforge.fml.relauncher.SideOnly
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.Item
 import net.minecraftforge.fml.relauncher.Side
+import net.minecraft.world.DimensionType
+
+
 
 
 object vl {
@@ -18,6 +21,8 @@ object vl {
     const val version = "1.0"
     const val acceptedMinecraftVersions = "[1.12, 1.13)"
     const val dependencies = "required-after:forgelin"
+    lateinit var dimType: DimensionType
+    var dimID = 141
 }
 
 class CreativeTab internal constructor() : CreativeTabs("voidland") {
