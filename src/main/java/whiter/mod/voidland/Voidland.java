@@ -18,6 +18,7 @@ import javax.annotation.Nonnull;
 
 /**
  * @author whiter
+ * @author g-breeze
  */
 @Mod(modid = vl.modid, name = vl.name, version = vl.version, acceptedMinecraftVersions = vl.acceptedMinecraftVersions, dependencies = vl.dependencies)
 @Mod.EventBusSubscriber

@@ -26,9 +26,11 @@ object vlregister {
         logger = event.modLog
 
         // register blocks & items
+        // 模板:val block_name = BlockBaseWithItem(block_material,block_name)
         val sample_item = ItemSample()
         val sampel_block = BlockSample()
         val block_sieve = BlockBaseWithItem(Material.WOOD, "block_sieve")
+        val soul_counter = BlockBaseWithItem(Material.null, "soul_counter")
 
         // register Dimension
         vl.dimType = DimensionType.register("vl_dimension", "_vl_dim", vl.dimID, VlWorldProvider::class.java, false)
