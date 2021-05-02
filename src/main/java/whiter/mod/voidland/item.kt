@@ -52,7 +52,7 @@ class ItemSample : ItemBase("sample_item"){
         // teleport
 
 
-//        playerIn.openGui(vl.mod, )
+        playerIn.openGui(vl.mod, guids.sample.ordinal, worldIn, playerIn.posX.toInt(), playerIn.posY.toInt(), playerIn.posZ.toInt())
 
 
         if (!worldIn.isRemote && playerIn is EntityPlayerMP) {

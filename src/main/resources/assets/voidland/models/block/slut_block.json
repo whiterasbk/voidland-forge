@@ -5,6 +5,7 @@
     "particle": "minecraft:blocks/planks_oak",
     "texture": "minecraft:blocks/planks_oak"
   },
+  "name": "slut_block",
   "elements": [
     {
       "from": [1, 6, 1],
