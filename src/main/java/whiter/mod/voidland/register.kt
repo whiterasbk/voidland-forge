@@ -29,6 +29,7 @@ object vlregister {
         val sample_item = ItemSample()
         val sampel_block = BlockSample()
         val block_sieve = BlockBaseWithItem(Material.WOOD, "block_sieve")
+        val slut_block = BlockBaseWithItem(Material.WOOD, "slut_block")
 
         // register Dimension
         vl.dimType = DimensionType.register("vl_dimension", "_vl_dim", vl.dimID, VlWorldProvider::class.java, false)
