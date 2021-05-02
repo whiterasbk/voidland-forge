@@ -26,7 +26,7 @@ object vlregister {
         logger = event.modLog
 
         // register blocks & items
-        val sample_item = ItemBase("sample_item")
+        val sample_item = ItemSample()
         val sampel_block = BlockSample()
         val block_sieve = BlockBaseWithItem(Material.WOOD, "block_sieve")
 

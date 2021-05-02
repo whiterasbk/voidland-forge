@@ -1,5 +1,6 @@
 package whiter.mod.voidland;
 
+import com.sun.org.apache.xml.internal.security.Init;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -25,6 +26,7 @@ public class Voidland {
     public static CommonProxy proxy;
     @Mod.Instance(vl.modid)
     public static  Voidland insatnce;
+
 
 
     @Mod.EventHandler

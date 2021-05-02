@@ -22,6 +22,7 @@ object vl {
     const val acceptedMinecraftVersions = "[1.12, 1.13)"
     const val dependencies = "required-after:forgelin"
     lateinit var dimType: DimensionType
+    val mod = Voidland.insatnce
     var dimID = 141
 }
 
