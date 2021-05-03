@@ -3,3 +3,9 @@ run
 .idea
 .gradle
 logs
+bin
+.settings
+
+
+.classpath
+.project
