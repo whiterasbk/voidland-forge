@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/voidland.iml" filepath="$PROJECT_DIR$/.idea/voidland.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/voidland.main.iml" filepath="$PROJECT_DIR$/.idea/modules/voidland.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/voidland.test.iml" filepath="$PROJECT_DIR$/.idea/modules/voidland.test.iml" />
     </modules>
   </component>
 </project>
