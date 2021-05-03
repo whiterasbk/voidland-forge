@@ -20,8 +20,6 @@ public class Voidland {
     @Mod.Instance(vl.modid)
     public static  Voidland insatnce;
 
-
-
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 

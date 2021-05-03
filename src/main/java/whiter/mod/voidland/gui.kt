@@ -22,19 +22,15 @@ enum class guids {
 
 class GUIHandler : IGuiHandler {
 
-    init {
-        NetworkRegistry.INSTANCE.registerGuiHandler(vl.mod, GUIHandler())
-    }
-
     override fun getServerGuiElement(ID: Int, player: EntityPlayer?, world: World?, x: Int, y: Int, z: Int): Any? {
-        return SampleGUI()
+        return null
     }
 
     override fun getClientGuiElement(ID: Int, player: EntityPlayer?, world: World?, x: Int, y: Int, z: Int): Any? {
         return if (ID == guids.sample.ordinal) {
             SampleGUI()
         } else {
-            SampleGUI()
+            null
         }
     }
 
@@ -45,7 +41,7 @@ class SampleGUI : GuiScreen() {
         this.drawDefaultBackground()
 
         val gwidth = 256
-        val gheight = 201
+        val gheight = 150
 
         val background = ResourceLocation(vl.modid, "textures/gui/sample.png");
         GlStateManager.color(1f, 1f, 1f, 1f)

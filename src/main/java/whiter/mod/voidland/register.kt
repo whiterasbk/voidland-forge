@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.Logger
 import net.minecraft.world.DimensionType
 import net.minecraftforge.common.DimensionManager
+import net.minecraftforge.fml.common.network.NetworkRegistry
 
 
 object vlregister {
@@ -37,6 +38,9 @@ object vlregister {
         val soul_counter_nocore = BlockBaseWithItem(Material.WOOD, "soul_counter_nocore")
         val soul_counter = BlockBaseWithItem(Material.WOOD, "soul_counter")
 
+        // init gui
+        NetworkRegistry.INSTANCE.registerGuiHandler(vl.mod, GUIHandler())
+
 
         // register Dimension
         vl.dimType = DimensionType.register("vl_dimension", "_vl_dim", vl.dimID, VlWorldProvider::class.java, false)
@@ -47,20 +51,20 @@ object vlregister {
 
 
     fun onRegisterBlocks(event: RegistryEvent.Register<Block>) {
-        logger.log(Level.DEBUG, "onRegisterBlocks")
-        println("voidland:onRegisterBlocks")
+        logger.info("onRegisterBlocks")
+//        println("voidland:onRegisterBlocks")
         blocks.register(event)
     }
 
     fun onRegisterItems(event: RegistryEvent.Register<Item>) {
-        logger.log(Level.DEBUG, "onRegisterItems")
-        println("voidland:onRegisterItems")
+        logger.info("onRegisterItems")
+//        println("voidland:onRegisterItems")
         items.register(event)
     }
 
     fun onRegisterModels(event: ModelRegistryEvent) {
-        logger.log(Level.DEBUG, "onRegisterModels")
-        println("voidland:onRegisterModels")
+        logger.info("onRegisterModels")
+//        println("voidland:onRegisterModels")
         blocks.initModels(event)
         items.initModels(event)
         // fluids.initModels()
@@ -81,9 +85,9 @@ object vlregister {
 
     fun onPostInit(event: FMLPostInitializationEvent) {
 
-        // check blocks & items
-        println(items.data)
-        println(blocks.data)
+//        // check blocks & items
+//        println(items.data)
+//        println(blocks.data)
     }
 
 }
