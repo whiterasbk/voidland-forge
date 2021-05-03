@@ -37,11 +37,18 @@ class GUIHandler : IGuiHandler {
 }
 
 class SampleGUI : GuiScreen() {
+
+
     override fun drawScreen(mouseX: Int, mouseY: Int, partialTicks: Float) {
         this.drawDefaultBackground()
 
-        val gwidth = 256
-        val gheight = 150
+        var gwidth = 256
+        var gheight = 256
+
+        gwidth = debug.x
+        gheight = debug.y
+
+
 
         val background = ResourceLocation(vl.modid, "textures/gui/sample.png");
         GlStateManager.color(1f, 1f, 1f, 1f)

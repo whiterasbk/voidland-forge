@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.Logger
 import net.minecraft.world.DimensionType
 import net.minecraftforge.common.DimensionManager
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent
 import net.minecraftforge.fml.common.network.NetworkRegistry
 
 
@@ -88,6 +89,12 @@ object vlregister {
 //        // check blocks & items
 //        println(items.data)
 //        println(blocks.data)
+    }
+
+    fun onServerStarting(event: FMLServerStartingEvent) {
+
+        print("开始了没")
+        event.registerServerCommand(VlCommand())
     }
 
 }
