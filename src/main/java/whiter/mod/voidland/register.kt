@@ -16,6 +16,10 @@ import net.minecraft.world.DimensionType
 import net.minecraftforge.common.DimensionManager
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent
 import net.minecraftforge.fml.common.network.NetworkRegistry
+import whiter.mod.voidland.block.BlockSample
+import whiter.mod.voidland.cmd.VlCommand
+import whiter.mod.voidland.cmd.VlCommand2
+import whiter.mod.voidland.item.ItemSample
 
 
 object vlregister {
@@ -27,11 +31,21 @@ object vlregister {
     fun onPreInit(event: FMLPreInitializationEvent) {
         logger = event.modLog
 
+
+        // register commands
+//        VlCommand()
+//        VlCommand2()
+
+
         // register blocks & items
         // 模板:val block_name = BlockBaseWithItem(block_material,block_name)
-        val sample_item = ItemSample()
-        val sampel_block = BlockSample()
+        ItemSample()
+        BlockSample()
+
+        val soul_stabilizer = ItemBase("soul_stabilizer")
+
         val block_sieve = BlockBaseWithItem(Material.WOOD, "block_sieve")
+//        val soul_stabilizer = combination("soul_stabilizer")
 
         val slut_block = BlockBaseWithItem(Material.WOOD, "slut_block")
         val soul_counter_base = BlockBaseWithItem(Material.WOOD, "soul_counter_base")
@@ -75,8 +89,17 @@ object vlregister {
 
     }
 
-    fun onRecipeRegistry(event: RegistryEvent.Register<IRecipe>) {}
-    fun onRegisterEnchantments(event: RegistryEvent.Register<Enchantment>) {}
+    fun onRecipeRegistry(event: RegistryEvent.Register<IRecipe>) {
+
+
+
+        // Synthesis table
+    }
+    fun onRegisterEnchantments(event: RegistryEvent.Register<Enchantment>) {
+
+
+        // Enchantments
+    }
 
 
 
@@ -94,7 +117,17 @@ object vlregister {
     fun onServerStarting(event: FMLServerStartingEvent) {
 
         print("开始了没")
-        event.registerServerCommand(VlCommand())
+//        event.registerServerCommand(VlCommand())
+//        event.registerServerCommand(VlCommand2())
+
+
+
+        // todo 不修了
+
+        // register commands
+//        VlCommand().register(event)
+//        VlCommand2().register(event)
+//        cmds.initCommands(event)
     }
 
 }

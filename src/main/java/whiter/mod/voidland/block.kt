@@ -2,7 +2,10 @@ package whiter.mod.voidland
 
 import net.minecraft.block.Block
 import net.minecraft.block.material.Material
+import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.item.ItemBlock
+import net.minecraft.util.math.BlockPos
+import net.minecraft.world.World
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.event.RegistryEvent
 import net.minecraftforge.fml.relauncher.Side
@@ -11,9 +14,12 @@ import whiter.mod.voidland.util.IHasModel
 import javax.annotation.Nonnull
 
 
+/**
+ * blocks open classes
+ */
 object blocks {
     val data = arrayListOf<Block>()
-    val list = mutableMapOf<String, Block>()
+    val map = mutableMapOf<String, Block>()
     val creativeTab = CreativeTab()
 
     @SideOnly(Side.CLIENT)
@@ -32,37 +38,16 @@ object blocks {
     }
 }
 
-
-class BlockSample : BlockBaseWithItem(Material.ROCK, "sample_block") {
-    init {
-        blocks.list["sample_block"] = this
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 open class BlockBase(mat: Material, @Nonnull name: String) : Block(mat), IHasModel {
     init {
         unlocalizedName = vl.modid + "." + name
         setRegistryName(name)
         setCreativeTab(blocks.creativeTab)
+
+        // todo reduce map and data
+        blocks.map[name] = this
         blocks.data.add(this)
+
     }
 }
 open class BlockBaseWithItem(mat: Material, @Nonnull name: String) : BlockBase(mat, name) {

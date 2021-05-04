@@ -23,7 +23,7 @@ class CreativeTab internal constructor() : CreativeTabs("voidland") {
 
     @SideOnly(Side.CLIENT)
     override fun getTabIconItem(): ItemStack {
-        return ItemStack(getItemFromBlock(blocks.list["sampel_block"]), 1)
+        return ItemStack(getItemFromBlock(blocks.map["sampel_block"]), 1)
     }
 
 }
