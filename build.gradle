@@ -79,6 +79,7 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2855'
     compile group: "net.shadowfacts", name: "Forgelin", version: "1.8.3"
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"

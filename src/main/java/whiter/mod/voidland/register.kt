@@ -37,7 +37,9 @@ object vlregister {
         val soul_counter_base = BlockBaseWithItem(Material.WOOD, "soul_counter_base")
         val soul_counter_center = BlockBaseWithItem(Material.WOOD, "soul_counter_center")
         val soul_counter_nocore = BlockBaseWithItem(Material.WOOD, "soul_counter_nocore")
-        val soul_counter = BlockBaseWithItem(Material.WOOD, "soul_counter")
+        val soul_counter = (BlockBaseWithItemMaterial.WOOD, "soul_counter")
+
+
 
         // init gui
         NetworkRegistry.INSTANCE.registerGuiHandler(vl.mod, GUIHandler())

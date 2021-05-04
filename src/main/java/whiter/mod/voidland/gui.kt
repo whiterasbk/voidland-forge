@@ -36,7 +36,7 @@ class GUIHandler : IGuiHandler {
 
 }
 
-class SampleGUI : GuiScreen() {
+open class SampleGUI : GuiScreen() {
 
 
     override fun drawScreen(mouseX: Int, mouseY: Int, partialTicks: Float) {
