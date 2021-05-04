@@ -17,6 +17,7 @@ import net.minecraftforge.common.DimensionManager
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent
 import net.minecraftforge.fml.common.network.NetworkRegistry
 import whiter.mod.voidland.block.BlockSample
+import whiter.mod.voidland.block.BlockSample2
 import whiter.mod.voidland.cmd.VlCommand
 import whiter.mod.voidland.cmd.VlCommand2
 import whiter.mod.voidland.item.ItemSample
@@ -68,6 +69,11 @@ object vlregister {
     fun onRegisterBlocks(event: RegistryEvent.Register<Block>) {
         logger.info("onRegisterBlocks")
 //        println("voidland:onRegisterBlocks")
+
+
+        event.registry.register(BlockSample2("slut_block"))
+
+
         blocks.register(event)
     }
 

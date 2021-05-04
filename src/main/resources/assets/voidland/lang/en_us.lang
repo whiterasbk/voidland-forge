@@ -1,4 +1,6 @@
 item.voidland.sample_item.name=SAMPLE
+item.voidland.soul_stabilizer.name=soul_stabilizer
+
 tile.voidland.block_sieve.name=sieve
 tile.voidland.sample_block.name=sample
 tile.voidland.slut_block.name=slut
@@ -6,4 +8,3 @@ tile.voidland.soul_counter.name=soul_counter
 tile.voidland.soul_counter_base.name=soul_counter_base
 tile.voidland.soul_counter_center.name=soul_counter_center
 tile.voidland.soul_counter_nocore.name=soul_counter_nocore
-tile.voidland.soul_stabilizer.name=soul_stabilizer

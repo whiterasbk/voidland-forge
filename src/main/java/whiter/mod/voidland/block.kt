@@ -20,7 +20,7 @@ import javax.annotation.Nonnull
 object blocks {
     val data = arrayListOf<Block>()
     val map = mutableMapOf<String, Block>()
-    val creativeTab = CreativeTab()
+    public val creativeTab = CreativeTab()
 
     @SideOnly(Side.CLIENT)
     fun initModels(event: ModelRegistryEvent) {
