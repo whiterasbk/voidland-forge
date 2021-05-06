@@ -37,8 +37,4 @@ class GUIHandler : IGuiHandler {
 
 }
 
-<<<<<<< HEAD
-open class SampleGUI : GuiScreen() {
-=======
->>>>>>> origin/dev
-
+open class SampleGUI : GuiScreen()
