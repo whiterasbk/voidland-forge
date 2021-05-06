@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "voidland:soul_counter_center",
+    "count": 1
+  },
+  "pattern": [
+    " x",
+    " y"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "y": {
+      "item": "voidland:soul_counter_base"
+    },
+    "x": {
+      "item": "voidland:soul_stabilizer"
+    }
+  }
+}

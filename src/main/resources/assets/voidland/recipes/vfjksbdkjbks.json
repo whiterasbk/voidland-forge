@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "my_mod:example",
+  "result": { "item": "voidland:soul_counter_center", "count": 1 },
+  "ingredients": [
+    { "item": "voidland:soul_counter_base", "data": 0 },
+    { "item": "voidland:soul_stabilizer", "data": 0 }
+  ]
+}

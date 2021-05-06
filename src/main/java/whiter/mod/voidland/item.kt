@@ -22,6 +22,8 @@ import javax.annotation.Nonnull
 
 object items {
     val data = arrayListOf<Item>()
+    val map = mutableMapOf<String, Item>()
+
 
     @SideOnly(Side.CLIENT)
     fun initModels(event: ModelRegistryEvent) {
@@ -45,37 +47,6 @@ object items {
 
 
 
-class ItemSample : ItemBase("sample_item"){
-    override fun onItemRightClick(worldIn: World, playerIn: EntityPlayer, handIn: EnumHand): ActionResult<ItemStack> {
-
-        println(233)
-
-        // teleport
-
-
-        playerIn.openGui(vl.mod, guids.sample.ordinal, worldIn, playerIn.posX.toInt(), playerIn.posY.toInt(), playerIn.posZ.toInt())
-
-
-        if (!worldIn.isRemote && playerIn is EntityPlayerMP) {
-
-//            val ws = FMLCommonHandler.instance().minecraftServerInstance.getWorld(vl.dimID)
-//            val plist = FMLCommonHandler.instance().minecraftServerInstance.playerList
-//            plist.transferPlayerToDimension(playerIn, vl.dimID, Teleporter(ws))
-        }
-
-
-        return super.onItemRightClick(worldIn, playerIn, handIn)
-    }
-}
-
-
-
-
-
-
-
-
-
 
 
 open class ItemBase(@Nonnull name: String) : Item(), IHasModel {
@@ -83,7 +54,10 @@ open class ItemBase(@Nonnull name: String) : Item(), IHasModel {
         unlocalizedName = vl.modid + "." + name
         setRegistryName(name)
         setCreativeTab(blocks.creativeTab)
+
+        // todo reduce data and map
         items.data.add(this)
+        items.map[name] = this
     }
 }
 
