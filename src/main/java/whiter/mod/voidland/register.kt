@@ -43,16 +43,30 @@ object vlregister {
         ItemSample()
         BlockSample()
 
+        // 魂魄稳定器
         val soul_stabilizer = ItemBase("soul_stabilizer")
-
+        // 筛子
         val block_sieve = BlockBaseWithItem(Material.WOOD, "block_sieve")
 //        val soul_stabilizer = combination("soul_stabilizer")
 
-        val slut_block = BlockBaseWithItem(Material.WOOD, "slut_block")
+        // 定向魂魄收集器-底座
         val soul_counter_base = BlockBaseWithItem(Material.WOOD, "soul_counter_base")
+
+        // 定向魂魄收集器-稳定器
         val soul_counter_center = BlockBaseWithItem(Material.WOOD, "soul_counter_center")
+
+        // 定向魂魄收集器-无核心
         val soul_counter_nocore = BlockBaseWithItem(Material.WOOD, "soul_counter_nocore")
+
+        // 定向魂魄收集器
         val soul_counter = BlockBaseWithItem(Material.WOOD, "soul_counter")
+
+        // 灵魂槽
+        val soul_slut = BlockBaseWithItem(Material.WOOD, "soul_slut")
+
+        // 魂魄容器
+        val soul_contanier = BlockBaseWithItem(Material.WOOD,"soul_contanier")
+
 
         // init gui
         NetworkRegistry.INSTANCE.registerGuiHandler(vl.mod, GUIHandler())
