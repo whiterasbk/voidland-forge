@@ -4,6 +4,7 @@ run
 .gradle
 logs
 bin
+out
 .settings
 
 
