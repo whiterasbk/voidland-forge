@@ -9,5 +9,6 @@ tile.voidland.soul_counter_center.name=定向魂魄收集器(稳定器)
 tile.voidland.soul_counter_nocore.name=定向魂魄收集器(无结晶)
 
 tile.voidland.soul_slut.name=灵魂槽
-titl.voidland.soul_container.name=灵魂容器
-titl.voidland.void_table.name=万象台
+tile.voidland.soul_container.name=灵魂容器
+tile.voidland.void_table.name=万象台
+tile.voidland.soul_flag.name=招魂幡

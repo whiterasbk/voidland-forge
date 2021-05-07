@@ -65,6 +65,9 @@ object vlregister {
         // 魂魄容器
         val soul_container = BlockSoulContainer()
 
+        // 招魂旗
+        val soul_flag = BlockSoulFlag()
+
 
         // init gui
         NetworkRegistry.INSTANCE.registerGuiHandler(vl.mod, GUIHandler())

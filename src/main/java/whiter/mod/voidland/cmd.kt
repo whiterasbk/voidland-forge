@@ -18,8 +18,8 @@ import net.minecraftforge.registries.IForgeRegistryEntry
 import whiter.mod.voidland.util.IHasModel
 
 object debug {
-    var x = 256
-    var y = 256
+    var x = 128
+    var y = 192
 }
 
 object cmds {
