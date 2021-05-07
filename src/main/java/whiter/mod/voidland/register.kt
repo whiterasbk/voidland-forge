@@ -16,8 +16,7 @@ import net.minecraft.world.DimensionType
 import net.minecraftforge.common.DimensionManager
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent
 import net.minecraftforge.fml.common.network.NetworkRegistry
-import whiter.mod.voidland.block.BlockSample
-import whiter.mod.voidland.block.BlockSample2
+import whiter.mod.voidland.block.*
 import whiter.mod.voidland.cmd.VlCommand
 import whiter.mod.voidland.cmd.VlCommand2
 import whiter.mod.voidland.item.ItemSample
@@ -49,23 +48,26 @@ object vlregister {
 //        val block_sieve = BlockBaseWithItem(Material.WOOD, "block_sieve")
 //        val soul_stabilizer = combination("soul_stabilizer")
 
+        // 万象台
+        val void_table = BlockVoidTable()
+
         // 定向魂魄收集器-底座
-        val soul_counter_base = BlockBaseWithItem(Material.WOOD, "soul_counter_base")
+        val soul_counter_base = BlockSoulCounterBase()
 
         // 定向魂魄收集器-稳定器
-        val soul_counter_center = BlockBaseWithItem(Material.WOOD, "soul_counter_center")
+        val soul_counter_center = BlockSoulCounterCenter()
 
         // 定向魂魄收集器-无核心
-        val soul_counter_nocore = BlockBaseWithItem(Material.WOOD, "soul_counter_nocore")
+        val soul_counter_nocore = BlockSoulCounterNocore()
 
         // 定向魂魄收集器
-        val soul_counter = BlockBaseWithItem(Material.WOOD, "soul_counter")
+        val soul_counter = BlockSoulCounter()
 
         // 灵魂槽
-        val soul_slut = BlockBaseWithItem(Material.WOOD, "soul_slut")
+        val soul_slut = BlockSoulSlut()
 
         // 魂魄容器
-        val soul_contanier = BlockBaseWithItem(Material.WOOD,"soul_contanier")
+        val soul_container = BlockSoulContainer()
 
 
         // init gui
