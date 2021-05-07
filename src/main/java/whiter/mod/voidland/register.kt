@@ -37,7 +37,6 @@ object vlregister {
 
 
         // register blocks & items
-        // 模板:val block_name = BlockBaseWithItem(block_material,block_name)
         ItemSample()
         BlockSample()
 
@@ -68,7 +67,6 @@ object vlregister {
 
         // init gui
         NetworkRegistry.INSTANCE.registerGuiHandler(vl.mod, GUIHandler())
-
 
         // register Dimension
         vl.dimType = DimensionType.register("vl_dimension", "_vl_dim", vl.dimID, VlWorldProvider::class.java, false)
@@ -131,7 +129,7 @@ object vlregister {
 
     fun onServerStarting(event: FMLServerStartingEvent) {
 
-        print("开始了没")
+//        print("开始了没")
 //        event.registerServerCommand(VlCommand())
 //        event.registerServerCommand(VlCommand2())
 
