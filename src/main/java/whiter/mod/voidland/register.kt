@@ -5,6 +5,7 @@ import net.minecraft.block.material.Material
 import net.minecraft.enchantment.Enchantment
 import net.minecraft.item.Item
 import net.minecraft.item.crafting.IRecipe
+import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.event.RegistryEvent
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
@@ -16,9 +17,12 @@ import net.minecraft.world.DimensionType
 import net.minecraftforge.common.DimensionManager
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent
 import net.minecraftforge.fml.common.network.NetworkRegistry
+import net.minecraftforge.fml.common.registry.EntityEntry
+import net.minecraftforge.fml.common.registry.EntityEntryBuilder
 import whiter.mod.voidland.block.*
 import whiter.mod.voidland.cmd.VlCommand
 import whiter.mod.voidland.cmd.VlCommand2
+import whiter.mod.voidland.entity.EntitySample
 import whiter.mod.voidland.item.ItemSample
 
 
@@ -141,6 +145,20 @@ object vlregister {
 //        VlCommand().register(event)`
 //        VlCommand2().register(event)
         cmds.initCommands(event)
+    }
+
+    fun onRegisterEntity(event: RegistryEvent.Register<EntityEntry>) {
+
+
+        event.registry.register(
+
+                EntityEntryBuilder.create<EntitySample>()
+                .entity(EntitySample::class.java)
+                .id(ResourceLocation(vl.modid, "my_entity"), 233)
+                .name("MyEntity")
+                .tracker(80, 3, false)
+                .build()
+        )
     }
 
 }
