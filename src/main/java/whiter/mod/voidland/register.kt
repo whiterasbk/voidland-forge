@@ -83,9 +83,6 @@ object vlregister {
 //        println("voidland:onRegisterBlocks")
 
 
-        event.registry.register(BlockSample2("slut_block"))
-
-
         blocks.register(event)
     }
 

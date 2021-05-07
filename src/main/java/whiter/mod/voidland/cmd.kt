@@ -23,7 +23,7 @@ object debug {
 }
 
 object cmds {
-    val map = mutableMapOf<String, VlCommandBase>()
+    val map = mutableMapOf<String, CommandBase>()
 
     fun initCommands(event: FMLServerStartingEvent) {
 
@@ -34,10 +34,11 @@ object cmds {
             println(each)
             //if
             // (each as VlCommandBase) .register(event)
+
             println(each is VlCommandBase)
 
-            if (each is VlCommandBase) {
-                each.register(event)
+            if (each.value is VlCommandBase) {
+                (each.value as VlCommandBase).register(event)
             }
         }
     }
