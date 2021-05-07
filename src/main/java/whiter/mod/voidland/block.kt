@@ -18,22 +18,22 @@ import javax.annotation.Nonnull
  * blocks open classes
  */
 object blocks {
-    val data = arrayListOf<Block>()
+//    val data = arrayListOf<Block>()
     val map = mutableMapOf<String, Block>()
-    public val creativeTab = CreativeTab()
+    val creativeTab = CreativeTab()
 
     @SideOnly(Side.CLIENT)
     fun initModels(event: ModelRegistryEvent) {
-        for (block in data) {
-            if (block is IHasModel) {
-                (block as IHasModel).initModel(event)
+        for (each in map) {
+            if (each.value is IHasModel) {
+                (each.value as IHasModel).initModel(event)
             }
         }
     }
 
     fun register(event: RegistryEvent.Register<Block>) {
-        for (block in data) {
-            event.registry.register(block)
+        for (each in map) {
+            event.registry.register(each.value)
         }
     }
 }
@@ -46,7 +46,7 @@ open class BlockBase(mat: Material, @Nonnull name: String) : Block(mat), IHasMod
 
         // todo reduce map and data
         blocks.map[name] = this
-        blocks.data.add(this)
+//        blocks.data.add(this)
 
     }
 }

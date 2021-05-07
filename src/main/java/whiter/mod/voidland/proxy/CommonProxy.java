@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.EntityEntry;
 import whiter.mod.voidland.vlregister;
 
 @Mod.EventBusSubscriber
@@ -46,6 +47,11 @@ public abstract class CommonProxy {
     @SubscribeEvent
     public void registerModels(ModelRegistryEvent event) {
 
+    }
+
+    @SubscribeEvent
+    public static void onRegisterEntity(RegistryEvent.Register<EntityEntry> event) {
+        vlregister.INSTANCE.onRegisterEntity(event);
     }
 
 

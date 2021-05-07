@@ -21,22 +21,22 @@ import javax.annotation.Nonnull
 
 
 object items {
-    val data = arrayListOf<Item>()
+//    val data = arrayListOf<Item>()
     val map = mutableMapOf<String, Item>()
 
 
     @SideOnly(Side.CLIENT)
     fun initModels(event: ModelRegistryEvent) {
-        for (item in data) {
-            if (item is IHasModel) {
-                (item as IHasModel).initModel(event)
+        for (each in map) {
+            if (each.value is IHasModel) {
+                (each.value as IHasModel).initModel(event)
             }
         }
     }
 
     fun register(event: RegistryEvent.Register<Item>) {
-        for (item in data) {
-            event.registry.register(item)
+        for (each in map) {
+            event.registry.register(each.value)
         }
     }
 }
@@ -56,7 +56,7 @@ open class ItemBase(@Nonnull name: String) : Item(), IHasModel {
         setCreativeTab(blocks.creativeTab)
 
         // todo reduce data and map
-        items.data.add(this)
+//        items.data.add(this)
         items.map[name] = this
     }
 }
@@ -64,7 +64,8 @@ open class ItemBase(@Nonnull name: String) : Item(), IHasModel {
 class ItemBlockBase(@Nonnull block: Block) : ItemBlock(block), IHasModel {
     init {
         registryName = block.registryName
-        items.data.add(this)
+//        items.data.add(this)
+        items.map[registryName.toString()] = this
     }
 }
 
