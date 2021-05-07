@@ -23,8 +23,7 @@ object debug {
 }
 
 object cmds {
-    val map = mutableMapOf<String, CommandBase>()
-
+    val map = mutableMapOf<String, VlCommandBase>()
 
     fun initCommands(event: FMLServerStartingEvent) {
 
@@ -38,7 +37,6 @@ object cmds {
             println(each is VlCommandBase)
 
             if (each is VlCommandBase) {
-                (each as VlCommandBase) .register(event)
                 each.register(event)
             }
         }
@@ -46,13 +44,16 @@ object cmds {
 }
 
 abstract class VlCommandBase(cmdname: String) : CommandBase() {
+
+    var command: String = cmdname
+
     init {
-        println("正在添加命令...${cmds.map}")
         cmds.map[cmdname] = this
+        println("正在添加命令...${cmds.map}")
     }
 
     override fun getName(): String {
-        return name
+        return command
     }
 
     fun register(event: FMLServerStartingEvent) {

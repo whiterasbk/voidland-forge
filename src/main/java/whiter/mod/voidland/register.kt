@@ -24,7 +24,6 @@ import whiter.mod.voidland.item.ItemSample
 
 object vlregister {
 
-
     // block => item => model
     lateinit var logger:Logger
 
@@ -33,8 +32,8 @@ object vlregister {
 
 
         // register commands
-//        VlCommand()
-//        VlCommand2()
+        VlCommand()
+        VlCommand2()
 
 
         // register blocks & items
@@ -44,9 +43,6 @@ object vlregister {
 
         // 魂魄稳定器
         val soul_stabilizer = ItemBase("soul_stabilizer")
-        // 筛子
-//        val block_sieve = BlockBaseWithItem(Material.WOOD, "block_sieve")
-//        val soul_stabilizer = combination("soul_stabilizer")
 
         // 万象台
         val void_table = BlockVoidTable()
@@ -149,7 +145,7 @@ object vlregister {
         // register commands
 //        VlCommand().register(event)`
 //        VlCommand2().register(event)
-//        cmds.initCommands(event)
+        cmds.initCommands(event)
     }
 
 }
