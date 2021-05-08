@@ -8,6 +8,10 @@ import net.minecraftforge.fml.relauncher.SideOnly
 @SideOnly(Side.CLIENT)
 class GuiContainerDemo(container: Container): GuiContainer(container) {
     override fun drawGuiContainerBackgroundLayer(partialTicks: Float, mouseX: Int, mouseY: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
+    }
+
+    override fun drawGuiContainerForegroundLayer(mouseX: Int, mouseY: Int) {
+        // TODO
     }
 }
