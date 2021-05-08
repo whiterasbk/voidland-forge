@@ -1,0 +1,36 @@
+Index: src/main/resources/assets/voidland/lang/zh_cn.lang
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>item.voidland.sample_item.name=SAMPLE\r\nitem.voidland.soul_stabilizer.name=魂魄稳定器\r\n\r\ntile.voidland.block_sieve.name=筛子\r\ntile.voidland.sample_block.name=样本\r\ntile.voidland.soul_counter.name=定向魂魄收集器\r\ntile.voidland.soul_counter_base.name=定向魂魄收集器(底座)\r\ntile.voidland.soul_counter_center.name=定向魂魄收集器(稳定器)\r\ntile.voidland.soul_counter_nocore.name=定向魂魄收集器(无结晶)\r\n\r\ntile.voidland.soul_slut.name=灵魂槽\r\ntile.voidland.soul_container.name=灵魂容器\r\ntile.voidland.void_table.name=万象台
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/resources/assets/voidland/lang/zh_cn.lang	(revision e687b76266dcd205559b1521b160e8c6a683d71a)
++++ src/main/resources/assets/voidland/lang/zh_cn.lang	(date 1620380728476)
+@@ -10,4 +10,5 @@
+ 
+ tile.voidland.soul_slut.name=灵魂槽
+ tile.voidland.soul_container.name=灵魂容器
+-tile.voidland.void_table.name=万象台
+\ No newline at end of file
++tile.voidland.void_table.name=万象台
++titl.voidland:soul_flag.name=招魂旗
+\ No newline at end of file
+Index: src/main/resources/assets/voidland/lang/en_us.lang
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>item.voidland.sample_item.name=SAMPLE\r\nitem.voidland.soul_stabilizer.name=soul_stabilizer\r\n\r\ntile.voidland.block_sieve.name=sieve\r\ntile.voidland.sample_block.name=sample\r\ntile.voidland.soul_counter.name=soul_counter\r\ntile.voidland.soul_counter_base.name=soul_counter_base\r\ntile.voidland.soul_counter_center.name=soul_counter_center\r\ntile.voidland.soul_counter_nocore.name=soul_counter_nocore\r\n\r\ntile.voidland.soul_slut.name=soul_slut\r\ntitl.voidland:soul_container.name =soul_container\r\ntitl.voidland:void_table.name =void_table
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/resources/assets/voidland/lang/en_us.lang	(revision e687b76266dcd205559b1521b160e8c6a683d71a)
++++ src/main/resources/assets/voidland/lang/en_us.lang	(date 1620380728466)
+@@ -10,4 +10,5 @@
+ 
+ tile.voidland.soul_slut.name=soul_slut
+ titl.voidland:soul_container.name =soul_container
+-titl.voidland:void_table.name =void_table
+\ No newline at end of file
++titl.voidland:void_table.name =void_table
++titl.voidland:soul_flag.name =soul_flag
+\ No newline at end of file
