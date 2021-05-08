@@ -39,6 +39,7 @@ class GUIHandler : IGuiHandler {
     override fun getClientGuiElement(ID: Int, player: EntityPlayer?, world: World?, x: Int, y: Int, z: Int): Any? {
         return when (ID) {
             guids.sample.ordinal -> GuiSample()
+            guids.void_table.ordinal -> GuiVoidTable()
             guids.demo.ordinal -> GuiContainerDemo(ContainerDemo())
             else -> null
         }

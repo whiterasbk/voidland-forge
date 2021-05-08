@@ -3,6 +3,9 @@ item.voidland.soul_stabilizer.name=soul_stabilizer
 
 tile.voidland.void_dirt.name=void_dirt
 tile.voidland.void_grass.name=void_grass
+tile.voidland.void_stone.name=void_stone
+tile.voidland.void_cobblestone.name=void_cobblestone
+tile.voidland.void_log.name=void_log
 
 tile.voidland.block_sieve.name=sieve
 tile.voidland.sample_block.name=sample

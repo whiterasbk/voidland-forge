@@ -3,6 +3,9 @@ item.voidland.soul_stabilizer.name=魂魄稳定器
 
 tile.voidland.void_dirt.name=滞魂土
 tile.voidland.void_grass.name=滞魂草方块
+tile.voidland.void_stone.name=滞魂石
+tile.voidland.void_cobblestone.name=滞魂原石
+tile.voidland.void_log.name=滞魂原木
 
 tile.voidland.block_sieve.name=筛子
 tile.voidland.sample_block.name=样本

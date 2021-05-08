@@ -20,8 +20,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry
 import net.minecraftforge.fml.common.registry.EntityEntry
 import net.minecraftforge.fml.common.registry.EntityEntryBuilder
 import whiter.mod.voidland.block.*
-import whiter.mod.voidland.block.base.BlockVoidDirt
-import whiter.mod.voidland.block.base.BlockVoidGrass
+import whiter.mod.voidland.block.base.*
 import whiter.mod.voidland.cmd.VlCommand
 import whiter.mod.voidland.cmd.VlCommand2
 import whiter.mod.voidland.entity.EntitySample
@@ -44,7 +43,11 @@ object vlregister {
 
         // register blocks & items
         ItemSample()
-        BlockSample()
+        //BlockSample()
+//        BlockSampleTallGrass()
+
+
+
 
         // ————基础方块————
         // 滞魂土
@@ -52,6 +55,15 @@ object vlregister {
 
         // 滞魂草方块
         val void_grass = BlockVoidGrass()
+
+        // 滞魂石
+        val void_stone = BlockVoidStone()
+
+        // 滞魂原石
+        val void_cobblestone = BlockVoidCobblestone()
+
+        // 滞魂原木
+        val void_log = BlockVoidLog()
 
         // ————特殊方块————
         // 魂魄稳定器

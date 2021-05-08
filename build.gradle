@@ -79,6 +79,12 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2855'
     compile group: "net.shadowfacts", name: "Forgelin", version: "1.8.3"
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    // https://mvnrepository.com/artifact/org.reflections/reflections
+    implementation group: 'org.reflections', name: 'reflections', version: '0.9.11'
+
+
+
+
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
@@ -113,6 +119,19 @@ jar {
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
+
+//    String someString = ''
+//    configurations.runtime.each {someString = someString + " lib\\"+it.name} //遍历项目的所有依赖的jar包赋值给变量someString
+//
+//    print(someString)
+//
+//    from {
+//
+////        configurations.implementation.collect {
+////
+////            it.isDirectory() ? it : zipTree(it)
+////        }
+//    }
 }
 
 // Example configuration to allow publishing using the maven-publish task
