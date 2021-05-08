@@ -11,7 +11,10 @@ import net.minecraft.util.ResourceLocation
 import sun.audio.AudioPlayer.player
 import net.minecraft.util.math.BlockPos
 import com.sun.xml.internal.bind.v2.model.core.ID
+import kotlinx.coroutines.awaitAll
 import net.minecraftforge.fml.common.network.NetworkRegistry
+import whiter.mod.voidland.gui.ContainerDemo
+import whiter.mod.voidland.gui.GuiContainerDemo
 import whiter.mod.voidland.gui.GuiSample
 import whiter.mod.voidland.gui.GuiVoidTable
 
@@ -19,25 +22,25 @@ import whiter.mod.voidland.gui.GuiVoidTable
 enum class guids {
     soul_conunter,
     sample,
-    void_table
+    void_table,
+    demo
 }
 
 
 class GUIHandler : IGuiHandler {
 
     override fun getServerGuiElement(ID: Int, player: EntityPlayer?, world: World?, x: Int, y: Int, z: Int): Any? {
-        return null
+        return when (ID) {
+            guids.demo.ordinal -> ContainerDemo()
+            else -> null
+        }
     }
 
     override fun getClientGuiElement(ID: Int, player: EntityPlayer?, world: World?, x: Int, y: Int, z: Int): Any? {
-        return if (ID == guids.sample.ordinal) {
-            GuiSample()
-        }
-        else if (ID == guids.void_table.ordinal) {
-            GuiVoidTable()
-        }
-        else {
-            null
+        return when (ID) {
+            guids.sample.ordinal -> GuiSample()
+            guids.demo.ordinal -> GuiContainerDemo(ContainerDemo())
+            else -> null
         }
     }
 

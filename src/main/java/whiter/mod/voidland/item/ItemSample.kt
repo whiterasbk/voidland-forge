@@ -9,6 +9,12 @@ import net.minecraft.world.World
 import whiter.mod.voidland.ItemBase
 import whiter.mod.voidland.guids
 import whiter.mod.voidland.vl
+import net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui
+import sun.awt.windows.ThemeReader.getPosition
+import net.minecraft.util.math.BlockPos
+import sun.awt.datatransfer.DataTransferer.isRemote
+
+
 
 
 class ItemSample : ItemBase("sample_item") {
@@ -19,7 +25,13 @@ class ItemSample : ItemBase("sample_item") {
         // teleport
 
 
-        playerIn.openGui(vl.mod, guids.sample.ordinal, worldIn, playerIn.posX.toInt(), playerIn.posY.toInt(), playerIn.posZ.toInt())
+        // playerIn.openGui(vl.mod, guids.sample.ordinal, worldIn, playerIn.posX.toInt(), playerIn.posY.toInt(), playerIn.posZ.toInt())
+
+        if (!worldIn.isRemote) {
+                val pos = playerIn.position
+                val id = guids.demo.ordinal
+                playerIn.openGui(vl.mod, id, worldIn, pos.x, pos.y, pos.z)
+        }
 
 
         if (!worldIn.isRemote && playerIn is EntityPlayerMP) {

@@ -96,8 +96,6 @@ object vlregister {
     fun onRegisterBlocks(event: RegistryEvent.Register<Block>) {
         logger.info("onRegisterBlocks")
 //        println("voidland:onRegisterBlocks")
-
-
         blocks.register(event)
     }
 
@@ -125,6 +123,7 @@ object vlregister {
 
         // Synthesis table
     }
+
     fun onRegisterEnchantments(event: RegistryEvent.Register<Enchantment>) {
 
 
@@ -146,22 +145,17 @@ object vlregister {
 
     fun onServerStarting(event: FMLServerStartingEvent) {
 
-//        print("开始了没")
-//        event.registerServerCommand(VlCommand())
-//        event.registerServerCommand(VlCommand2())
-
-
-
-        // todo 不修了
-
-        // register commands
-//        VlCommand().register(event)`
-//        VlCommand2().register(event)
+//      event.registerServerCommand(VlCommand())
+//      event.registerServerCommand(VlCommand2())
+//      register commands
+//      VlCommand().register(event)
+//      VlCommand2().register(event)
+//
+//      todo 不修了
         cmds.initCommands(event)
     }
 
     fun onRegisterEntity(event: RegistryEvent.Register<EntityEntry>) {
-
 
         event.registry.register(
 
