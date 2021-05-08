@@ -1,6 +1,9 @@
 item.voidland.sample_item.name=SAMPLE
 item.voidland.soul_stabilizer.name=魂魄稳定器
 
+tile.voidland.void_dirt.name=滞魂土
+tile.voidland.void_grass.name=滞魂草方块
+
 tile.voidland.block_sieve.name=筛子
 tile.voidland.sample_block.name=样本
 tile.voidland.soul_counter.name=定向魂魄收集器
