@@ -50,6 +50,7 @@ open class BlockBase(mat: Material, @Nonnull name: String) : Block(mat), IHasMod
 
     }
 }
+
 open class BlockBaseWithItem(mat: Material, @Nonnull name: String) : BlockBase(mat, name) {
     var item: ItemBlock = ItemBlockBase(this)
 }
