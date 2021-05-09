@@ -3,7 +3,7 @@
   "modid": "voidland",
   "name": "voidland",
   "description": "voidland is voidland",
-  "version": "${version}",
+  "version": "1.0",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
