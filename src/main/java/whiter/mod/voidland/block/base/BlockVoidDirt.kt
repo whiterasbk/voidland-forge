@@ -1,5 +1,6 @@
 package whiter.mod.voidland.block.base
 
+import net.minecraft.block.Block
 import net.minecraft.block.material.MapColor
 import net.minecraft.block.material.Material
 import net.minecraft.block.properties.IProperty
@@ -16,8 +17,10 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.world.IBlockAccess
 import net.minecraft.world.World
 import whiter.mod.voidland.BlockBaseWithItem
+import whiter.mod.voidland.annotation.RegisterBlock
 
-class BlockVoidDirt: BlockBaseWithItem(Material.GROUND, "void_dirt") {
+@RegisterBlock
+class BlockVoidDirt: Block(Material.GROUND) {
 
 //    val VARIANT: PropertyEnum<DirtType> = PropertyEnum.create("variant", BlockVoidDirt.DirtType::class.java)
 //    val SNOWY = PropertyBool.create("snowy")

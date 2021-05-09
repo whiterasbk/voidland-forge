@@ -15,28 +15,34 @@ import net.minecraftforge.event.RegistryEvent
 import net.minecraftforge.fml.common.FMLCommonHandler
 import net.minecraftforge.fml.relauncher.Side
 import net.minecraftforge.fml.relauncher.SideOnly
+import org.apache.logging.log4j.Logger
 import scala.tools.nsc.doc.model.Object
 import whiter.mod.voidland.util.IHasModel
+import whiter.mod.voidland.util.util
 import javax.annotation.Nonnull
 
 
 object items {
-//    val data = arrayListOf<Item>()
+    val tobeInitModel = mutableMapOf<String, Item>()
     val map = mutableMapOf<String, Item>()
-
+    lateinit var logger: Logger
 
     @SideOnly(Side.CLIENT)
     fun initModels(event: ModelRegistryEvent) {
-        for (each in map) {
-            if (each.value is IHasModel) {
-                (each.value as IHasModel).initModel(event)
-            }
+
+        for (each in tobeInitModel) {
+
+            util.initModel(each.value, event)
+//            if (each.value is IHasModel) {
+//                (each.value as IHasModel).initModel(event)
+//            }
         }
     }
 
     fun register(event: RegistryEvent.Register<Item>) {
         for (each in map) {
             event.registry.register(each.value)
+            logger.info("Voidland onRegisterItem: ${each.value.registryName}")
         }
     }
 }
@@ -53,7 +59,7 @@ open class ItemBase(@Nonnull name: String) : Item(), IHasModel {
     init {
         unlocalizedName = vl.modid + "." + name
         setRegistryName(name)
-        setCreativeTab(blocks.creativeTab)
+        setCreativeTab(vl.creative_tab)
 
         // todo reduce data and map
 //        items.data.add(this)

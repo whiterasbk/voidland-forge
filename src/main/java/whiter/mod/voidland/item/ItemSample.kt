@@ -2,6 +2,7 @@ package whiter.mod.voidland.item
 
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.entity.player.EntityPlayerMP
+import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.util.ActionResult
 import net.minecraft.util.EnumHand
@@ -13,11 +14,11 @@ import net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui
 import sun.awt.windows.ThemeReader.getPosition
 import net.minecraft.util.math.BlockPos
 import sun.awt.datatransfer.DataTransferer.isRemote
+import whiter.mod.voidland.annotation.RegisterItem
 
 
-
-
-class ItemSample : ItemBase("sample_item") {
+@RegisterItem
+class ItemSampleItem : Item() {
     override fun onItemRightClick(worldIn: World, playerIn: EntityPlayer, handIn: EnumHand): ActionResult<ItemStack> {
 
         println(233)

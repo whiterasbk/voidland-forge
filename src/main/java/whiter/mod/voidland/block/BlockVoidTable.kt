@@ -1,5 +1,6 @@
 package whiter.mod.voidland.block
 
+import net.minecraft.block.Block
 import net.minecraft.block.material.Material
 import net.minecraft.block.state.IBlockState
 import net.minecraft.entity.player.EntityPlayer
@@ -10,12 +11,14 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.world.IInteractionObject
 import net.minecraft.world.World
 import whiter.mod.voidland.BlockBaseWithItem
+import whiter.mod.voidland.annotation.RegisterBlock
 import whiter.mod.voidland.gui.GuiSample
 import whiter.mod.voidland.gui.GuiVoidTable
 import whiter.mod.voidland.guids
 import whiter.mod.voidland.vl
 
-class BlockVoidTable : BlockBaseWithItem(Material.ROCK, "void_table") {
+@RegisterBlock
+class BlockVoidTable : Block(Material.ROCK) {
     override fun isFullCube(state: IBlockState): Boolean {
         return false
     }

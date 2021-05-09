@@ -24,7 +24,7 @@ import whiter.mod.voidland.block.base.*
 import whiter.mod.voidland.cmd.VlCommand
 import whiter.mod.voidland.cmd.VlCommand2
 import whiter.mod.voidland.entity.EntitySample
-import whiter.mod.voidland.item.ItemSample
+import whiter.mod.voidland.util.Registers
 
 
 object vlregister {
@@ -33,66 +33,67 @@ object vlregister {
     lateinit var logger:Logger
 
     fun onPreInit(event: FMLPreInitializationEvent) {
-        logger = event.modLog
+        // set a CreativeTab
+        vl.creative_tab = CreativeTab()
 
+        logger = event.modLog
+        items.logger = logger
+        blocks.logger = logger
+
+        // register blocks & items
+        Registers.registerBlock()
+        Registers.registerItem()
 
         // register commands
         VlCommand()
         VlCommand2()
 
-
-        // register blocks & items
-        ItemSample()
-        //BlockSample()
-//        BlockSampleTallGrass()
-
-
-
-
-        // ————基础方块————
-        // 滞魂土
-        val void_dirt = BlockVoidDirt()
-
-        // 滞魂草方块
-        val void_grass = BlockVoidGrass()
-
-        // 滞魂石
-        val void_stone = BlockVoidStone()
-
-        // 滞魂原石
-        val void_cobblestone = BlockVoidCobblestone()
-
-        // 滞魂原木
-        val void_log = BlockVoidLog()
-
-        // ————特殊方块————
         // 魂魄稳定器
-        val soul_stabilizer = ItemBase("soul_stabilizer")
+//        val soul_stabilizer = ItemBase("soul_stabilizer")
 
-        // 万象台
-        val void_table = BlockVoidTable()
 
-        // 定向魂魄收集器-底座
-        val soul_counter_base = BlockSoulCounterBase()
-
-        // 定向魂魄收集器-稳定器
-        val soul_counter_center = BlockSoulCounterCenter()
-
-        // 定向魂魄收集器-无核心
-        val soul_counter_nocore = BlockSoulCounterNocore()
-
-        // 定向魂魄收集器
-        val soul_counter = BlockSoulCounter()
-
-        // 灵魂槽
-        val soul_slut = BlockSoulSlut()
-
-        // 魂魄容器
-        val soul_container = BlockSoulContainer()
-
-        // 招魂旗
-        val soul_flag = BlockSoulFlag()
-
+//        // ————基础方块————
+//        // 滞魂土
+//        val void_dirt = BlockVoidDirt()
+//
+//        // 滞魂草方块
+//        val void_grass = BlockVoidGrass()
+//
+//        // 滞魂石
+//        val void_stone = BlockVoidStone()
+//
+//        // 滞魂原石
+//        val void_cobblestone = BlockVoidCobblestone()
+//
+//        // 滞魂原木
+//        val void_log = BlockVoidLog()
+//
+//        // ————特殊方块————
+//
+//        // 万象台
+//        val void_table = BlockVoidTable()
+//
+//        // 定向魂魄收集器-底座
+//        val soul_counter_base = BlockSoulCounterBase()
+//
+//        // 定向魂魄收集器-稳定器
+//        val soul_counter_center = BlockSoulCounterCenter()
+//
+//        // 定向魂魄收集器-无核心
+//        val soul_counter_nocore = BlockSoulCounterNocore()
+//
+//        // 定向魂魄收集器
+//        val soul_counter = BlockSoulCounter()
+//
+//        // 灵魂槽
+//        val soul_slut = BlockSoulSlut()
+//
+//        // 魂魄容器
+//        val soul_container = BlockSoulContainer()
+//
+//        // 招魂旗
+//        val soul_flag = BlockSoulFlag()
+//
 
         // init gui
         NetworkRegistry.INSTANCE.registerGuiHandler(vl.mod, GUIHandler())
@@ -103,23 +104,18 @@ object vlregister {
 
     }
 
-
-
     fun onRegisterBlocks(event: RegistryEvent.Register<Block>) {
         logger.info("onRegisterBlocks")
-//        println("voidland:onRegisterBlocks")
         blocks.register(event)
     }
 
     fun onRegisterItems(event: RegistryEvent.Register<Item>) {
         logger.info("onRegisterItems")
-//        println("voidland:onRegisterItems")
         items.register(event)
     }
 
     fun onRegisterModels(event: ModelRegistryEvent) {
         logger.info("onRegisterModels")
-//        println("voidland:onRegisterModels")
         blocks.initModels(event)
         items.initModels(event)
         // fluids.initModels()
@@ -150,20 +146,9 @@ object vlregister {
 
     fun onPostInit(event: FMLPostInitializationEvent) {
 
-//        // check blocks & items
-//        println(items.data)
-//        println(blocks.data)
     }
 
     fun onServerStarting(event: FMLServerStartingEvent) {
-
-//      event.registerServerCommand(VlCommand())
-//      event.registerServerCommand(VlCommand2())
-//      register commands
-//      VlCommand().register(event)
-//      VlCommand2().register(event)
-//
-//      todo 不修了
         cmds.initCommands(event)
     }
 

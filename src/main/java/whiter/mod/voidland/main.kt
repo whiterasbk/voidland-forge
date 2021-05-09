@@ -7,7 +7,6 @@ import net.minecraft.world.DimensionType
 import net.minecraftforge.fml.relauncher.Side
 import net.minecraftforge.fml.relauncher.SideOnly
 
-
 object vl {
     const val modid = "voidland"
     const val name = "无主之地"
@@ -17,13 +16,14 @@ object vl {
     lateinit var dimType: DimensionType
     val mod = Voidland.insatnce
     var dimID = 141
+    val modpkgName = "whiter.mod.voidland"
+    lateinit var creative_tab: CreativeTab
 }
 
-class CreativeTab internal constructor() : CreativeTabs("voidland") {
+class CreativeTab : CreativeTabs("voidland") {
 
     @SideOnly(Side.CLIENT)
     override fun getTabIconItem(): ItemStack {
-        return ItemStack(getItemFromBlock(blocks.map["sampel_block"]), 1)
+        return ItemStack(getItemFromBlock(blocks.map["voidland:void_table"]), 1)
     }
-
 }

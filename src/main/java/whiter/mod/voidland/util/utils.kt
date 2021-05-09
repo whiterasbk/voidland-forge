@@ -9,10 +9,35 @@ import net.minecraftforge.fml.relauncher.Side
 import net.minecraftforge.fml.relauncher.SideOnly
 import net.minecraftforge.registries.IForgeRegistryEntry
 
-
 object util {
+    fun name2_Case(str: String): String {
+        val a = StringBuffer()
+        for(i in str) {
+            if (i in 'A'..'Z') {
+                a.append("_").append(i.toString().toLowerCase())
+            } else {
+                a.append(i)
+            }
+        }
 
+        val r = a.toString()
+        return if (r.startsWith("_")) {
+            r.replaceFirst("_", "")
+        } else {
+            r
+        }
+    }
 
+    fun initModel(bori: IForgeRegistryEntry.Impl<*>, event: ModelRegistryEvent) {
+        if (bori is Item)
+            ModelLoader.setCustomModelResourceLocation(bori, 0,
+                    ModelResourceLocation((bori).registryName!!, "inventory"))
+        else if (bori is Block)
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(bori), 0,
+                    ModelResourceLocation((bori).registryName!!, "inventory"))
+        else
+            throw IllegalArgumentException("Unable to register model")
+    }
 }
 
 interface IHasModel {
@@ -30,5 +55,6 @@ interface IHasModel {
     }
 
 }
+
 
 
