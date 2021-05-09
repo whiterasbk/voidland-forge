@@ -2,10 +2,7 @@ package whiter.mod.voidland
 
 import net.minecraft.block.Block
 import net.minecraft.block.material.Material
-import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.item.ItemBlock
-import net.minecraft.util.math.BlockPos
-import net.minecraft.world.World
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.event.RegistryEvent
 import net.minecraftforge.fml.relauncher.Side

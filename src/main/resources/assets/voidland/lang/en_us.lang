@@ -6,6 +6,11 @@ tile.voidland.void_grass.name=void_grass
 tile.voidland.void_stone.name=void_stone
 tile.voidland.void_cobblestone.name=void_cobblestone
 tile.voidland.void_log.name=void_log
+tile.voidland.void_board.name=void_board
+tile.voidland.void_leaves.name=void_leaves
+tile.voidland.soul_log.name=soul_log
+tile.voidland.soul_board.name=soul_board
+tile.voidland.soul_leaves.name=soul_leaves
 
 tile.voidland.block_sieve.name=sieve
 tile.voidland.sample_block.name=sample

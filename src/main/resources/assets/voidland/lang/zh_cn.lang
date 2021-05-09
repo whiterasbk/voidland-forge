@@ -6,6 +6,11 @@ tile.voidland.void_grass.name=滞魂草方块
 tile.voidland.void_stone.name=滞魂石
 tile.voidland.void_cobblestone.name=滞魂原石
 tile.voidland.void_log.name=滞魂原木
+tile.voidland.void_board.name=滞魂木板
+tile.voidland.void_leaves.name=滞魂叶
+tile.voidland.soul_log.name=聚魂原木
+tile.voidland.soul_board.name=聚魂木板
+tile.voidland.soul_leaves.name=聚魂叶
 
 tile.voidland.block_sieve.name=筛子
 tile.voidland.sample_block.name=样本

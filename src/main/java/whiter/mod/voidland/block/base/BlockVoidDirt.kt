@@ -1,5 +1,6 @@
 package whiter.mod.voidland.block.base
 
+import net.minecraft.block.SoundType
 import net.minecraft.block.material.MapColor
 import net.minecraft.block.material.Material
 import net.minecraft.block.properties.IProperty
@@ -18,6 +19,14 @@ import net.minecraft.world.World
 import whiter.mod.voidland.BlockBaseWithItem
 
 class BlockVoidDirt: BlockBaseWithItem(Material.GROUND, "void_dirt") {
+    init {
+        this.setTickRandomly(true);
+        //this.setCreativeTab(CreativeTabs.DECORATIONS);
+        this.setHardness(0.4F);
+        this.setLightOpacity(1);
+        this.setLightLevel(0F)
+        this.setSoundType(SoundType.PLANT);
+    }
 
 //    val VARIANT: PropertyEnum<DirtType> = PropertyEnum.create("variant", BlockVoidDirt.DirtType::class.java)
 //    val SNOWY = PropertyBool.create("snowy")

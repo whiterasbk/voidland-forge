@@ -1,7 +1,6 @@
 package whiter.mod.voidland
 
 import net.minecraft.block.Block
-import net.minecraft.block.material.Material
 import net.minecraft.enchantment.Enchantment
 import net.minecraft.item.Item
 import net.minecraft.item.crafting.IRecipe
@@ -11,7 +10,6 @@ import net.minecraftforge.event.RegistryEvent
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
-import org.apache.logging.log4j.Level
 import org.apache.logging.log4j.Logger
 import net.minecraft.world.DimensionType
 import net.minecraftforge.common.DimensionManager
@@ -64,6 +62,21 @@ object vlregister {
 
         // 滞魂原木
         val void_log = BlockVoidLog()
+
+        // 滞魂木板
+        val void_board = BlockVoidBoard()
+
+        // 滞魂叶
+        val void_leaves = BlockVoidLeaves()
+
+        // 聚魂原木
+        val soul_log = BlockSoulLog()
+
+        // 聚魂木板
+        val soul_board = BlockSoulBoard()
+
+        // 聚魂叶
+        val soul_leaves = BlockSoulLeaves()
 
         // ————特殊方块————
         // 魂魄稳定器

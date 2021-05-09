@@ -1,0 +1,48 @@
+{
+  "credit": "Made with Blockbench",
+  "textures": {
+    "0": "voidland:blocks/soul_leaves",
+    "particle": "voidland:blocks/soul_leaves"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+        "east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+        "south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+        "west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+        "up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+        "down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [65, 35, 0],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [65, 35, 0],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "firstperson_righthand": {
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "firstperson_lefthand": {
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "ground": {
+      "translation": [0, 3, 0],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "gui": {
+      "rotation": [45, 45, 0],
+      "scale": [0.6, 0.6, 0.6]
+    },
+    "fixed": {
+      "scale": [0.5, 0.5, 0.5]
+    }
+  }
+}

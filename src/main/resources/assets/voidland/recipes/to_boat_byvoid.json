@@ -1,0 +1,29 @@
+{
+  "result": {
+    "item": "minecraft:boat",
+    "count": 1
+  },
+  "pattern": [
+    "   ",
+    "a b",
+    "xyz"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": {
+      "item": "voidland:void_board"
+    },
+    "y": {
+      "item": "voidland:void_board"
+    },
+    "z": {
+      "item": "voidland:void_board"
+    },
+    "a": {
+      "item": "voidland:void_board"
+    },
+    "b": {
+      "item": "voidland:void_board"
+    }
+  }
+}
