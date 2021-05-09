@@ -6,18 +6,16 @@ import net.minecraft.block.material.Material
 import whiter.mod.voidland.annotation.RegisterBlock
 
 /*
-* 滞魂草方块
+* 聚魂原木
 * */
 @RegisterBlock
-class BlockVoidGrass : Block(Material.GRASS) {
+class BlockSoulLog : Block(Material.WOOD) {
     init {
-//         val  aabb: AxisAlignedBB = AxisAlignedBB()
         this.setTickRandomly(true);
-        //        val  aabb: AxisAlignedBB = AxisAlignedBB()
         //this.setCreativeTab(CreativeTabs.DECORATIONS);
-        this.setHardness(0.5F);
+        this.setHardness(1.15F);
         this.setLightOpacity(1);
         this.setLightLevel(0F)
-        this.setSoundType(SoundType.PLANT);
+        this.setSoundType(SoundType.WOOD);
     }
 }

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "voidland:blocks/void_board",
+    "down": "voidland:blocks/void_board",
+    "up": "voidland:blocks/void_board",
+    "north": "voidland:blocks/void_board",
+    "south": "voidland:blocks/void_board",
+    "west": "voidland:blocks/void_board",
+    "east": "voidland:blocks/void_board"
+  }
+}

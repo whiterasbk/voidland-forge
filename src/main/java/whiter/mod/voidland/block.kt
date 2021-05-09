@@ -3,10 +3,7 @@ package whiter.mod.voidland
 import net.minecraft.block.Block
 import net.minecraft.block.material.Material
 import net.minecraft.creativetab.CreativeTabs
-import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.item.ItemBlock
-import net.minecraft.util.math.BlockPos
-import net.minecraft.world.World
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.event.RegistryEvent
 import net.minecraftforge.fml.relauncher.Side
@@ -43,12 +40,7 @@ object blocks {
     @SideOnly(Side.CLIENT)
     fun initModels(event: ModelRegistryEvent) {
         for (each in tobeInitModel) {
-
             util.initModel(each.value, event)
-//            logger.info("${}")
-//            if (each.value is IHasModel) {
-//                (each.value as IHasModel).initModel(event)
-//            }
         }
     }
 
@@ -66,10 +58,7 @@ open class BlockBase(mat: Material, @Nonnull name: String) : Block(mat), IHasMod
         setRegistryName(name)
         setCreativeTab(vl.creative_tab)
 
-        // todo reduce map and data
         blocks.map[name] = this
-//        blocks.data.add(this)
-
     }
 }
 

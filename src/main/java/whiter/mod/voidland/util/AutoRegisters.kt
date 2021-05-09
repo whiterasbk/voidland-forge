@@ -7,7 +7,7 @@ import whiter.mod.voidland.*
 import whiter.mod.voidland.annotation.RegisterBlock
 import whiter.mod.voidland.annotation.RegisterItem
 
-object Registers {
+object AutoRegisters {
     fun registerBlock() {
         val cls = AnnotationScanner.getAnnotationClasses(vl.modpkgName + ".block", RegisterBlock::class.java)
 

@@ -1,4 +1,4 @@
-package whiter.mod.voidland.block.base
+package whiter.mod.voidland.block
 
 import net.minecraft.block.Block
 import net.minecraft.block.SoundType
@@ -9,28 +9,39 @@ import net.minecraft.init.Items
 import net.minecraft.item.ItemStack
 import net.minecraft.stats.StatList
 import net.minecraft.tileentity.TileEntity
+import net.minecraft.util.BlockRenderLayer
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import whiter.mod.voidland.annotation.RegisterBlock
+
 /*
-* 滞魂石
+* 滞魂叶
 * */
 @RegisterBlock
-class BlockVoidStone : Block(Material.ROCK) {
+class BlockVoidLeaves : Block(Material.LEAVES) {
     init {
         this.setTickRandomly(true);
-        this.setHardness(1.2F);
+        //this.setCreativeTab(CreativeTabs.DECORATIONS);
+        this.setHardness(0.2F);
         this.setLightOpacity(1);
         this.setLightLevel(0F)
-        this.setSoundType(SoundType.STONE);
+        this.setSoundType(SoundType.PLANT);
+    }
+    override fun isFullCube(state: IBlockState): Boolean {
+        return false
     }
 
+    override fun isOpaqueCube(state: IBlockState): Boolean {
+        return false
+    }
+    override fun getBlockLayer(): BlockRenderLayer {
+        return BlockRenderLayer.TRANSLUCENT
+    }
     override fun harvestBlock(worldIn: World, player: EntityPlayer, pos: BlockPos, state: IBlockState, te: TileEntity?, stack: ItemStack) {
-        if (!worldIn.isRemote && (stack.item === Items.WOODEN_PICKAXE || stack.item === Items.STONE_PICKAXE || stack.item === Items.IRON_PICKAXE || stack.item === Items.GOLDEN_PICKAXE || stack.item === Items.DIAMOND_PICKAXE)) {
+        if (!worldIn.isRemote && stack.item === Items.SHEARS) {
             super.harvestBlock(worldIn, player, pos, state, te, stack)
         } else {
             player.addStat(StatList.getBlockStats(this)!!)
         }
     }
-
 }

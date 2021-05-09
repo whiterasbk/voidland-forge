@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "voidland:soul_board",
+    "count": 4
+  },
+  "pattern": [
+    "   ",
+    " x ",
+    "   "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": {
+      "item": "voidland:soul_log"
+    }
+  }
+}

@@ -1,26 +1,23 @@
 package whiter.mod.voidland.block.base
 
 import net.minecraft.block.Block
-import net.minecraft.block.material.MapColor
+import net.minecraft.block.SoundType
 import net.minecraft.block.material.Material
-import net.minecraft.block.properties.IProperty
-import net.minecraft.block.properties.PropertyBool
-import net.minecraft.block.properties.PropertyEnum
-import net.minecraft.block.state.BlockStateContainer
-import net.minecraft.block.state.IBlockState
-import net.minecraft.creativetab.CreativeTabs
-import net.minecraft.init.Blocks
-import net.minecraft.item.ItemStack
-import net.minecraft.util.IStringSerializable
-import net.minecraft.util.NonNullList
-import net.minecraft.util.math.BlockPos
-import net.minecraft.world.IBlockAccess
-import net.minecraft.world.World
-import whiter.mod.voidland.BlockBaseWithItem
 import whiter.mod.voidland.annotation.RegisterBlock
 
+/*
+* 滞魂土
+* */
 @RegisterBlock
 class BlockVoidDirt: Block(Material.GROUND) {
+    init {
+        this.setTickRandomly(true);
+        //this.setCreativeTab(CreativeTabs.DECORATIONS);
+        this.setHardness(0.4F);
+        this.setLightOpacity(1);
+        this.setLightLevel(0F)
+        this.setSoundType(SoundType.PLANT);
+    }
 
 //    val VARIANT: PropertyEnum<DirtType> = PropertyEnum.create("variant", BlockVoidDirt.DirtType::class.java)
 //    val SNOWY = PropertyBool.create("snowy")
