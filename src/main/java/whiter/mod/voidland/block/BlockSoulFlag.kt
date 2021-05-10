@@ -16,14 +16,14 @@ import whiter.mod.voidland.annotation.RegisterBlock
 @RegisterBlock
 class BlockSoulFlag : Block(Material.ROCK) {
 
-    protected val AABB_BOTTOM_FLAG = AxisAlignedBB(0.0, 0.0, 0.0, 1.0, 0.25, 1.0)
+    val AABB_BOTTOM_FLAG = AxisAlignedBB(0.0, 0.0, 0.0, 1.0, 0.25, 1.0)
 
     init {
-        this.setTickRandomly(true);
-        this.setHardness(0.5F);
-        this.setLightOpacity(1);
-        this.setLightLevel(0F)
-        this.setSoundType(SoundType.METAL);
+        tickRandomly = true
+        soundType = SoundType.METAL
+        setHardness(0.5F)
+        setLightOpacity(1)
+        setLightLevel(0F)
     }
 
     override fun getBoundingBox(state: IBlockState, source: IBlockAccess, pos: BlockPos): AxisAlignedBB {

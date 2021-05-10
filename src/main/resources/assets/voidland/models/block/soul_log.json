@@ -4,9 +4,9 @@
     "particle": "voidland:blocks/soul_log",
     "down": "voidland:blocks/soul_log_top",
     "up": "voidland:blocks/soul_log_top",
-    "north": "voidland:blocks/soul_log",
-    "south": "voidland:blocks/soul_log",
-    "west": "voidland:blocks/soul_log",
-    "east": "voidland:blocks/soul_log"
+    "north": "voidland:blocks/soul_log_anime",
+    "south": "voidland:blocks/soul_log_anime",
+    "west": "voidland:blocks/soul_log_anime",
+    "east": "voidland:blocks/soul_log_anime"
   }
 }
