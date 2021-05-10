@@ -1,4 +1,4 @@
-package whiter.mod.voidland.block
+package whiter.mod.voidland.block.sam
 
 import net.minecraft.block.Block
 import net.minecraft.block.material.Material
@@ -13,7 +13,7 @@ import net.minecraft.world.World
 import whiter.mod.voidland.annotation.RegisterBlock
 
 @RegisterBlock(name = "block_sieve")
-class BlockSample : Block(Material.WOOD) {
+class BlockSieve : Block(Material.WOOD) {
 
     override fun isFullCube(state: IBlockState): Boolean {
         return false
@@ -30,6 +30,8 @@ class BlockSample : Block(Material.WOOD) {
     override fun onBlockActivated(worldIn: World, pos: BlockPos, state: IBlockState, playerIn: EntityPlayer, hand: EnumHand, facing: EnumFacing, hitX: Float, hitY: Float, hitZ: Float): Boolean {
         return super.onBlockActivated(worldIn, pos, state, playerIn, hand, facing, hitX, hitY, hitZ)
     }
+
+
 
 
 }
