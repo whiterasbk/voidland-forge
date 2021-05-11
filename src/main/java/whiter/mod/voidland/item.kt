@@ -60,9 +60,6 @@ open class ItemBase(@Nonnull name: String) : Item(), IHasModel {
         unlocalizedName = vl.modid + "." + name
         setRegistryName(name)
         setCreativeTab(vl.creative_tab)
-
-        // todo reduce data and map
-//        items.data.add(this)
         items.map[name] = this
     }
 }

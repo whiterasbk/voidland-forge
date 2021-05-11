@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "voidland:blocks/taiji_cube",
+    "down": "voidland:blocks/taiji_white",
+    "up": "voidland:blocks/taiji_cube_up",
+    "north": "voidland:blocks/taiji_white",
+    "south": "voidland:blocks/taiji_white",
+    "west": "voidland:blocks/taiji_white",
+    "east": "voidland:blocks/taiji_white"
+  }
+}
