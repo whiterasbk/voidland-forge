@@ -1,10 +1,9 @@
 {
   "result": {
-    "item": "minecraft:boat",
-    "count": 1
+    "item": "voidland:soul_board_slab",
+    "count": 6
   },
   "pattern": [
-    "x x",
     "xxx"
   ],
   "type": "minecraft:crafting_shaped",
@@ -12,10 +11,6 @@
     "x": [
       {
         "item": "voidland:soul_board",
-        "date": 0
-      },
-      {
-        "item": "voidland:void_board",
         "date": 0
       }
     ]

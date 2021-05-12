@@ -1,17 +1,17 @@
 {
+  "type": "crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "voidland:void_log",
+      "data": 0
+    }
+  },
   "result": {
     "item": "voidland:void_board",
+    "data": 0,
     "count": 4
-  },
-  "pattern": [
-    "   ",
-    " x ",
-    "   "
-  ],
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "x": {
-      "item": "voidland:void_log"
-    }
   }
 }

@@ -1,5 +1,11 @@
 item.voidland.sample_item.name=SAMPLE
 item.voidland.soul_stabilizer.name=soul_stabilizer
+item.voidland.soul_bottle.name=soul_bottle
+item.voidland.peach_wood_sword.name=peach_wood_sword
+
+tile.voidland.soul_counter_base.name=soul_counter_base
+tile.voidland.soul_board_slab.name=soul_board_slab
+tile.voidland.void_board_slab.name=void_board_slab
 
 tile.voidland.void_dirt.name=void_dirt
 tile.voidland.void_grass.name=void_grass
@@ -15,7 +21,6 @@ tile.voidland.soul_leaves.name=soul_leaves
 tile.voidland.block_sieve.name=sieve
 tile.voidland.sample_block.name=sample
 tile.voidland.soul_counter.name=soul_counter
-tile.voidland.soul_counter_base.name=soul_counter_base
 tile.voidland.soul_counter_center.name=soul_counter_center
 tile.voidland.soul_counter_nocore.name=soul_counter_nocore
 

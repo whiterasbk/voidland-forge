@@ -1,14 +1,19 @@
 {
   "result": {
-    "item": "minecraft:boat",
+    "item": "voidland:peach_wood_sword",
     "count": 1
   },
   "pattern": [
-    "x x",
-    "xxx"
+    "x",
+    "x",
+    "y"
   ],
   "type": "minecraft:crafting_shaped",
   "key": {
+    "y": {
+      "item": "minecraft:stick",
+      "date": 0
+    },
     "x": [
       {
         "item": "voidland:soul_board",

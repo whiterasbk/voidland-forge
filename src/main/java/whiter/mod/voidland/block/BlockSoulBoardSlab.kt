@@ -11,21 +11,20 @@ import net.minecraft.world.IBlockAccess
 import whiter.mod.voidland.annotation.RegisterBlock
 
 /*
-* 定向魂魄收集器-底座
+* 聚魂木半砖
 * */
 @RegisterBlock
-class BlockSoulCounterBase : Block(Material.ROCK) {
+class BlockSoulBoardSlab : Block(Material.WOOD) {
 
     protected val AABB_BOTTOM_HALF = AxisAlignedBB(0.0, 0.0, 0.0, 1.0, 0.5, 1.0)
     protected val AABB_TOP_HALF = AxisAlignedBB(0.0, 0.5, 0.0, 1.0, 1.0, 1.0)
 
     init {
         this.setTickRandomly(true);
-        //this.setCreativeTab(CreativeTabs.DECORATIONS);
-        this.setHardness(0.5F);
-        this.setLightOpacity(1);
+        this.setHardness(0.6F)
+        this.setLightOpacity(1)
         this.setLightLevel(0F)
-        this.setSoundType(SoundType.METAL);
+        this.setSoundType(SoundType.WOOD)
 
     }
 

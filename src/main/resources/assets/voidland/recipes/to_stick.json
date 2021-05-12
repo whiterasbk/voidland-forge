@@ -1,11 +1,11 @@
 {
   "result": {
-    "item": "minecraft:boat",
-    "count": 1
+    "item": "minecraft:stick",
+    "count": 4
   },
   "pattern": [
-    "x x",
-    "xxx"
+    "x",
+    "x"
   ],
   "type": "minecraft:crafting_shaped",
   "key": {
