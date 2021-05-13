@@ -2,6 +2,8 @@ item.voidland.sample_item.name=SAMPLE
 item.voidland.soul_stabilizer.name=魂魄稳定器
 item.voidland.soul_bottle.name=纳魂瓶
 item.voidland.peach_wood_sword.name=桃木剑
+item.voidland.charm_paper.name=符咒纸
+item.voidland.void_charm.name=符咒
 
 tile.voidland.soul_counter_base.name=定向魂魄收集器(底座)
 tile.voidland.soul_board_slab.name=聚魂木半砖
@@ -17,6 +19,7 @@ tile.voidland.void_leaves.name=滞魂叶
 tile.voidland.soul_log.name=聚魂原木
 tile.voidland.soul_board.name=聚魂木板
 tile.voidland.soul_leaves.name=聚魂叶
+tile.voidland.void_jade_ore.name=玉石矿
 
 tile.voidland.block_sieve.name=筛子
 tile.voidland.sample_block.name=样本

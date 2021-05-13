@@ -1,0 +1,24 @@
+{
+  "result": {
+    "item": "voidland:charm_paper",
+    "count": 1
+  },
+  "pattern": [
+    "x",
+    "x",
+    "x"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "x": [
+      {
+        "item": "minecraft:paper",
+        "date": 0
+      },
+      {
+        "item": "minecraft:paper",
+        "date": 0
+      }
+    ]
+  }
+}
