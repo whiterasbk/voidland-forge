@@ -13,7 +13,7 @@ class GuiVoidTable: GuiScreen() {
     override fun drawScreen(mouseX: Int, mouseY: Int, partialTicks: Float) {
         this.drawDefaultBackground()
 
-        var gwidth = 128
+        var gwidth = 96
         var gheight = 128
 
         gwidth = debug.x
