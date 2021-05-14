@@ -1,10 +1,26 @@
 item.voidland.sample_item.name=SAMPLE
 item.voidland.soul_stabilizer.name=soul_stabilizer
 item.voidland.soul_bottle.name=soul_bottle
+item.voidland.soul_contaminated_chip.name=soul_contaminated_chip
+item.voidland.soul_turbid_chip.name=soul_turbid_chip
+item.voidland.soul_unknow_chip.name=soul_unknow_chip
+item.voidland.soul_resolute_chip.name=soul_resolute_chip
+item.voidland.soul_gentle_chip.name=soul_gentle_chip
+item.voidland.soul_pure_chip.name=soul_pure_chip
+item.voidland.soul_irascible_chip.name=soul_irascible_chip
+item.voidland.soul_heavy_chip.name=soul_heavy_chip
+item.voidland.soul_piece.name=soul_piece
+item.voidland.soul_crystal.name=soul_crystal
+item.voidland.soul_stone.name=soul_stone
 item.voidland.peach_wood_sword.name=peach_wood_sword
 item.voidland.charm_paper.name=charm_paper
+item.voidland.charm_water.name=charm_water
 item.voidland.void_charm.name=void_charm
 item.voidland.void_jade.name=void_jade
+item.voidland.void_blood_jade.name=void_blood_jade
+item.voidland.void_amethyst.name=void_amethyst
+item.voidland.void_seed_subao.name=void_seed_subao
+item.voidland.void_ziyan_jade.name=void_ziyan_jade
 
 tile.voidland.soul_counter_base.name=soul_counter_base
 tile.voidland.soul_board_slab.name=soul_board_slab
