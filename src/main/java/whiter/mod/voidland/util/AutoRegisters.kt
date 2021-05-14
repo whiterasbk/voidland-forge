@@ -47,6 +47,10 @@ object AutoRegisters {
                     items.map[blk.registryName.toString()] = ItemBlockBase(blk)
                 }
 
+                if (anno.burnTime != 0) {
+                    smelt.burnMap[blk.registryName.toString()] = anno.burnTime
+                }
+
 //                println("vlregister: $blk name: ${blk.registryName}")
 
             } else {
@@ -88,6 +92,10 @@ object AutoRegisters {
 
                 if (anno.hasModel) {
                     items.tobeInitModel[item.registryName.toString()] = item
+                }
+
+                if (anno.burnTime != 0) {
+                    smelt.burnMap[item.registryName.toString()] = anno.burnTime
                 }
 
 //                println("vlregister: $item name: ${item.registryName}")

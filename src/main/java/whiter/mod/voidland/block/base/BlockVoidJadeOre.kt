@@ -13,13 +13,14 @@ import net.minecraft.tileentity.TileEntity
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import whiter.mod.voidland.annotation.RegisterBlock
+import whiter.mod.voidland.blocks
 import whiter.mod.voidland.items
 import java.util.*
 
 /*
 * 玉石矿
 * */
-@RegisterBlock
+@RegisterBlock(burnTime = 1000)
 class BlockVoidJadeOre : Block(Material.ROCK) {
     init {
         this.setTickRandomly(true);
@@ -38,7 +39,10 @@ class BlockVoidJadeOre : Block(Material.ROCK) {
     }
 //     todo make with voidjade
     override fun getItemDropped(state: IBlockState, rand: Random, fortune: Int): Item? {
+
         return items.map["voidland:soul_bottle"]
     }
+
+
 
 }

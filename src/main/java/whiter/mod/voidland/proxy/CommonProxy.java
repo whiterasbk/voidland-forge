@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -69,5 +70,10 @@ public abstract class CommonProxy {
 
     public boolean runningOnServer() {
         return false;
+    }
+
+    @SubscribeEvent
+    public static void getVanillaFurnaceFuelValue(FurnaceFuelBurnTimeEvent event) {
+        vlregister.INSTANCE.getVanillaFurnaceFuelValue(event);
     }
 }

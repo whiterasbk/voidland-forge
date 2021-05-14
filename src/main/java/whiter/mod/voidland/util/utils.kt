@@ -28,6 +28,14 @@ object util {
         }
     }
 
+    fun clipBIstr(str: String, prefix: String): String {
+        return if (str.startsWith(prefix)) {
+            name2_Case(str.substring(prefix.length))
+        } else {
+            name2_Case(str)
+        }
+    }
+
     fun initModel(bori: IForgeRegistryEntry.Impl<*>, event: ModelRegistryEvent) {
         if (bori is Item)
             ModelLoader.setCustomModelResourceLocation(bori, 0,
