@@ -8,6 +8,8 @@ import whiter.mod.voidland.util.AnnotationScanner
 
 fun main(args: Array<String>) {
 
+    Itemwo
+
 
 
     val m = "ABlockMainBlock"
