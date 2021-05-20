@@ -1,6 +1,9 @@
 package whiter.mod.voidland
 
+import net.minecraft.block.Block
+import net.minecraft.block.SoundType
 import net.minecraft.block.material.Material
+import net.minecraftforge.registries.IForgeRegistryEntry
 import org.reflections.Reflections
 import scala.Function0
 import whiter.mod.voidland.annotation.RegisterBlock
@@ -12,15 +15,19 @@ fun main(args: Array<String>) {
 
 
 
-    val m = "ABlockMainBlock"
+//    val m = "ABlockMainBlock"
+////
+////    if (m.startsWith("Block")) {
+////        print(name2_Case(m.substring("Block".length)))
+////    } else {
+////        print(name2_Case(m))
+////    }
+    val b = BlockBase(Material.WOOD, "")
 
-    if (m.startsWith("Block")) {
-        print(name2_Case(m.substring("Block".length)))
-    } else {
-        print(name2_Case(m))
-    }
-    
-    
+
+    val i : Class<out IForgeRegistryEntry.Impl<Block>> = Block(Material.GRASS).javaClass
+
+    println(i.isAssignableFrom(Block::class.java))
 
 //    val set = AnnotationScanner.getAnnotationClasses("whiter.mod.voidland.block.base", RegisterBlock::class.java)
 //    print(set)
