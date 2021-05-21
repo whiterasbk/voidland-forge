@@ -48,7 +48,7 @@ object AutoRegisters {
                 }
 
                 if (anno.burnTime != 0) {
-                    smelt.burnMap[blk.registryName.toString()] = anno.burnTime
+                    smelt.addBurnMap(blk.registryName.toString(), anno.burnTime)
                 }
 
 //                println("vlregister: $blk name: ${blk.registryName}")
@@ -95,7 +95,7 @@ object AutoRegisters {
                 }
 
                 if (anno.burnTime != 0) {
-                    smelt.burnMap[item.registryName.toString()] = anno.burnTime
+                    smelt.addBurnMap(item.registryName.toString(), anno.burnTime)
                 }
 
 //                println("vlregister: $item name: ${item.registryName}")

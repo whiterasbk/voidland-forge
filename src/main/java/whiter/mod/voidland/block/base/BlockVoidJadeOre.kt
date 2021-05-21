@@ -20,7 +20,7 @@ import java.util.*
 /*
 * 玉石矿
 * */
-@RegisterBlock(burnTime = 1000)
+@RegisterBlock
 class BlockVoidJadeOre : Block(Material.ROCK) {
     init {
         this.setTickRandomly(true);

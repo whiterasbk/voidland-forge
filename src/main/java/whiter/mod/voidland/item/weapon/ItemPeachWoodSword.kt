@@ -19,6 +19,7 @@ import whiter.mod.voidland.annotation.RegisterItem
 
 @RegisterItem
 class ItemPeachWoodSword: Item() {
+
 //    lateinit var attackDamage: Double
 //    lateinit var material: Item.ToolMaterial
 //

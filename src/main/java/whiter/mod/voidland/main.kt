@@ -3,6 +3,7 @@ package whiter.mod.voidland
 import net.minecraft.block.Block
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.enchantment.Enchantment
+import net.minecraft.entity.monster.EntitySkeleton
 import net.minecraft.item.Item
 import net.minecraft.item.Item.getItemFromBlock
 import net.minecraft.item.ItemStack
@@ -39,6 +40,9 @@ import whiter.mod.voidland.item.ItemVoidCharm
 import whiter.mod.voidland.util.AutoRegisters
 import whiter.mod.voidland.util.util
 import kotlin.reflect.KClass
+
+
+
 
 object vl {
     const val modid = "voidland"
@@ -112,7 +116,6 @@ object vlregister {
         // register smelt
 
 
-
     }
 
     fun onRegisterItemsLowest(event: RegistryEvent.Register<Item>) {
@@ -137,9 +140,7 @@ object vlregister {
         logger.info("onPostInit")
 
         // register smelt
-        smelt.register(BlockVoidJadeOre::class, ItemVoidCharm::class, 1f)
-        smelt.register(ItemVoidCharm::class, BlockVoidDirt::class, 1f)
-        smelt.register(ItemCharmPaper::class, ItemSoulStabilizer::class, 1f)
+
     }
 
     fun onServerStarting(event: FMLServerStartingEvent) {

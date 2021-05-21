@@ -46,9 +46,11 @@ class BlockSoulSlut : Block(Material.ROCK) {
     override fun getBlockLayer(): BlockRenderLayer {
         return BlockRenderLayer.TRANSLUCENT
     }
+
     fun getSlutBonus(world: World, pos: BlockPos): Float {
         return (if (blocks.map["voidland:soul_slut"]?.equals(this)!!) 1 else 0).toFloat()
     }
+
     @SideOnly(Side.CLIENT)
     override fun randomDisplayTick(stateIn: IBlockState, worldIn: World, pos: BlockPos, rand: Random) {
         super.randomDisplayTick(stateIn, worldIn, pos, rand)
