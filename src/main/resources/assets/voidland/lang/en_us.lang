@@ -29,6 +29,7 @@ item.voidland.void_ziyan_jade.name=void_ziyan_jade
 item.voidland.void_holy_water_throw.name=void_holy_water_throw
 item.voidland.void_holy_water_perfect.name=void_holy_water_perfect
 item.voidland.void_seven_star_chip.name=void_seven_star_chip
+item.voidland.debug_item.name=debug
 
 tile.voidland.soul_counter_base.name=soul_counter_base
 tile.voidland.soul_board_slab.name=soul_board_slab

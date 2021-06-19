@@ -1,4 +1,4 @@
-package whiter.mod.voidland.item
+package whiter.mod.voidland.item.sam
 
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.entity.player.EntityPlayerMP

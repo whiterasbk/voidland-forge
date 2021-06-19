@@ -6,14 +6,18 @@ import net.minecraft.block.material.Material
 import net.minecraft.block.state.IBlockState
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.init.Items
+import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.stats.StatList
 import net.minecraft.tileentity.TileEntity
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import whiter.mod.voidland.annotation.RegisterBlock
+import whiter.mod.voidland.items
+import java.util.*
+
 /*
-* 玉石矿
+* 紫晶矿
 * */
 @RegisterBlock
 class BlockVoidAmethystOre : Block(Material.ROCK) {
@@ -32,9 +36,9 @@ class BlockVoidAmethystOre : Block(Material.ROCK) {
             player.addStat(StatList.getBlockStats(this)!!)
         }
     }
-    // todo make with voidjade
-//    override fun getItemDropped(state: IBlockState, rand: Random, fortune: int): Item {
-//        return Item.voidjade
-//    }
+
+    override fun getItemDropped(state: IBlockState, rand: Random, fortune: Int): Item? {
+        return items.map["voidland:void_amethyst"]
+    }
 
 }

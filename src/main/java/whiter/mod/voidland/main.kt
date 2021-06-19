@@ -41,9 +41,6 @@ import whiter.mod.voidland.util.AutoRegisters
 import whiter.mod.voidland.util.util
 import kotlin.reflect.KClass
 
-
-
-
 object vl {
     const val modid = "voidland"
     const val name = "无主之地"

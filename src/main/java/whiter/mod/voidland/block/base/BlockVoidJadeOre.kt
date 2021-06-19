@@ -37,10 +37,9 @@ class BlockVoidJadeOre : Block(Material.ROCK) {
             player.addStat(StatList.getBlockStats(this)!!)
         }
     }
-//     todo make with voidjade
-    override fun getItemDropped(state: IBlockState, rand: Random, fortune: Int): Item? {
 
-        return items.map["voidland:soul_bottle"]
+    override fun getItemDropped(state: IBlockState, rand: Random, fortune: Int): Item? {
+        return items.map["voidland:void_jade"]
     }
 
 
