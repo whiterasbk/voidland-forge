@@ -21,13 +21,13 @@ import javax.annotation.Nullable
 
 @RegisterItem
 class ItemVoidGhostKingAxe: Item() {
-    val peachMaterial = EnumHelper.addToolMaterial("VOIDGHOSTKINGAXE", 3, 16, 16.0F, 0.0F, 10);
-    var attackDamage: Float = 8.0F
+    val peachMaterial = EnumHelper.addToolMaterial("VOIDGHOSTKINGAXE", 3, 1420, 16.0F, 0.0F, 10);
+    var attackDamage: Float = -1.0F
     init {
         this.maxStackSize = 1
-        this.maxDamage = 4
+        this.maxDamage = 1420
         //this.creativeTab = CreativeTabs.COMBAT
-        this.attackDamage = 3.0f + attackDamage
+        this.attackDamage = 12.0f + attackDamage
     }
 
     @SideOnly(Side.CLIENT)

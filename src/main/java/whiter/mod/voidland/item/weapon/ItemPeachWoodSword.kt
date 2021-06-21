@@ -3,13 +3,9 @@ package whiter.mod.voidland.item.weapon
 import com.google.common.collect.Multimap
 import net.minecraft.block.material.Material
 import net.minecraft.block.state.IBlockState
-import net.minecraft.creativetab.CreativeTabs
-import net.minecraft.entity.Entity
-import net.minecraft.entity.EntityList
 import net.minecraft.entity.EntityLivingBase
 import net.minecraft.entity.SharedMonsterAttributes
 import net.minecraft.entity.ai.attributes.AttributeModifier
-import net.minecraft.entity.monster.EntityZombie
 import net.minecraft.init.Blocks
 import net.minecraft.inventory.EntityEquipmentSlot
 import net.minecraft.item.Item
@@ -28,13 +24,14 @@ import javax.annotation.Nullable
 @RegisterItem
 class ItemPeachWoodSword(): Item() {
 
-    val peachMaterial = EnumHelper.addToolMaterial("PEACHWOODSWORD", 3, 16, 16.0F, 0.0F, 10);
+    val peachMaterial = EnumHelper.addToolMaterial("PEACHWOODSWORD", 3, 128, 16.0F, 0.0F, 10);
     var attackDamage: Float = -1.0F
     init {
+
         this.maxStackSize = 1
-        this.maxDamage = 4
+        this.maxDamage = 128
         //this.creativeTab = CreativeTabs.COMBAT
-        this.attackDamage = 3.0f + attackDamage
+        this.attackDamage = 4.0f + attackDamage
     }
 
     @SideOnly(Side.CLIENT)
@@ -55,11 +52,11 @@ class ItemPeachWoodSword(): Item() {
 
     override fun hitEntity(stack: ItemStack, target: EntityLivingBase, attacker: EntityLivingBase): Boolean {
         if (target is (EntityMob)) {
-            this.attackDamage = 9.0F
+            var thealth: Float = target.getHealth()
+            target.setHealth(thealth - 8)
             stack.damageItem(1, attacker)
             return true
         }
-        this.attackDamage = 3.0F
         stack.damageItem(1, attacker)
         return true
     }

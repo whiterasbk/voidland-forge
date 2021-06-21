@@ -7,6 +7,7 @@ import net.minecraft.client.util.ITooltipFlag
 import net.minecraft.entity.EntityLivingBase
 import net.minecraft.entity.SharedMonsterAttributes
 import net.minecraft.entity.ai.attributes.AttributeModifier
+import net.minecraft.entity.monster.EntityMob
 import net.minecraft.init.Blocks
 import net.minecraft.inventory.EntityEquipmentSlot
 import net.minecraft.item.Item
@@ -21,13 +22,13 @@ import javax.annotation.Nullable
 
 @RegisterItem
 class ItemVoidBullSword: Item() {
-    val peachMaterial = EnumHelper.addToolMaterial("VOIDBULLSWORD", 3, 16, 16.0F, 0.0F, 10);
-    var attackDamage: Float = 2.0F
+    val peachMaterial = EnumHelper.addToolMaterial("VOIDBULLSWORD", 3, 1780, 16.0F, 0.0F, 10);
+    var attackDamage: Float = -1.0F
     init {
         this.maxStackSize = 1
-        this.maxDamage = 4
+        this.maxDamage = 1780
         //this.creativeTab = CreativeTabs.COMBAT
-        this.attackDamage = 3.0f + attackDamage
+        this.attackDamage = 6.0f + attackDamage
     }
 
     @SideOnly(Side.CLIENT)
@@ -47,6 +48,12 @@ class ItemVoidBullSword: Item() {
     }
 
     override fun hitEntity(stack: ItemStack, target: EntityLivingBase, attacker: EntityLivingBase): Boolean {
+        if (target is (EntityMob)) {
+            stack.damageItem(1, attacker)
+            return true
+        }
+        var thealth: Float = target.getHealth()
+        target.setHealth(thealth - 2)
         stack.damageItem(1, attacker)
         return true
     }
