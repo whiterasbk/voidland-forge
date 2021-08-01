@@ -13,7 +13,7 @@ class BlockVoidBoard : Block(Material.WOOD) {
     init {
         this.setTickRandomly(true);
         //this.setCreativeTab(CreativeTabs.DECORATIONS);
-        this.setHardness(0.6F);
+        this.setHardness(1.3F);
         this.setLightOpacity(1);
         this.setLightLevel(0F)
         this.setSoundType(SoundType.WOOD);

@@ -1,13 +1,15 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#"
+    "x"
   ],
   "key": {
-    "#": {
-      "item": "voidland:soul_log",
-      "data": 0
-    }
+    "x": [
+      {
+        "item": "voidland:soul_log",
+        "date": 0
+      }
+    ]
   },
   "result": {
     "item": "voidland:soul_board",

@@ -1,4 +1,7 @@
 item.voidland.sample_item.name=SAMPLE
+
+item.voidland.voidland_book.name=[无主之地]Voidland札记手册
+
 item.voidland.soul_stabilizer.name=魂魄稳定器
 item.voidland.soul_bottle.name=纳魂瓶
 item.voidland.soul_contaminated_chip.name=被污染的灵魂破片
@@ -12,6 +15,7 @@ item.voidland.soul_heavy_chip.name=厚重的灵魂破片(土)
 item.voidland.soul_piece.name=魂魄晶片
 item.voidland.soul_crystal.name=魂魄结晶
 item.voidland.soul_stone.name=灵魂石
+item.voidland.soul_ashe.name=灵魂灰
 item.voidland.peach_wood_sword.name=桃木剑
 item.voidland.void_god_whip.name=打神鞭
 item.voidland.void_smash_blade.name=万仞刀
@@ -24,6 +28,7 @@ item.voidland.void_charm.name=符咒
 item.voidland.void_jade.name=玉石
 item.voidland.void_blood_jade.name=血玉
 item.voidland.void_amethyst.name=紫水晶
+item.voidland.void_blue_crystal.name=蓝水晶
 item.voidland.void_seed_subao.name=速爆瓜子
 item.voidland.void_ziyan_jade.name=紫炎的八尺琼勾玉
 item.voidland.void_holy_water_throw.name=圣水(抛掷)
@@ -38,6 +43,7 @@ tile.voidland.void_board_slab.name=滞魂木半砖
 tile.voidland.void_dirt.name=滞魂土
 tile.voidland.void_grass.name=滞魂草方块
 tile.voidland.void_stone.name=滞魂石
+tile.voidland.void_nether_stone.name=幽冥石
 tile.voidland.void_cobblestone.name=滞魂原石
 tile.voidland.void_log.name=滞魂原木
 tile.voidland.void_board.name=滞魂木板
@@ -45,8 +51,10 @@ tile.voidland.void_leaves.name=滞魂叶
 tile.voidland.soul_log.name=聚魂原木
 tile.voidland.soul_board.name=聚魂木板
 tile.voidland.soul_leaves.name=聚魂叶
+tile.voidland.soul_ashe_sand.name=灵魂灰烬沙土
 tile.voidland.void_jade_ore.name=玉石矿
 tile.voidland.void_amethyst_ore.name=紫晶矿
+tile.voidland.void_blue_crystal_ore.name=蓝晶矿
 
 tile.voidland.block_sieve.name=筛子
 tile.voidland.sample_block.name=样本

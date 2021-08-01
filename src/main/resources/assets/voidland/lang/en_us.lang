@@ -1,4 +1,7 @@
 item.voidland.sample_item.name=SAMPLE
+
+item.voidland.voidland_book.name=voidland_book
+
 item.voidland.soul_stabilizer.name=soul_stabilizer
 item.voidland.soul_bottle.name=soul_bottle
 item.voidland.soul_contaminated_chip.name=soul_contaminated_chip
@@ -12,6 +15,7 @@ item.voidland.soul_heavy_chip.name=soul_heavy_chip
 item.voidland.soul_piece.name=soul_piece
 item.voidland.soul_crystal.name=soul_crystal
 item.voidland.soul_stone.name=soul_stone
+item.voidland.soul_ashe.name=soul_ashe
 item.voidland.peach_wood_sword.name=peach_wood_sword
 item.voidland.void_god_whip.name=void_god_whip
 item.voidland.void_smash_blade.name=void_smash_blade
@@ -24,6 +28,7 @@ item.voidland.void_charm.name=void_charm
 item.voidland.void_jade.name=void_jade
 item.voidland.void_blood_jade.name=void_blood_jade
 item.voidland.void_amethyst.name=void_amethyst
+item.voidland.void_blue_crystal.name=void_blue_crystal
 item.voidland.void_seed_subao.name=void_seed_subao
 item.voidland.void_ziyan_jade.name=void_ziyan_jade
 item.voidland.void_holy_water_throw.name=void_holy_water_throw
@@ -38,6 +43,7 @@ tile.voidland.void_board_slab.name=void_board_slab
 tile.voidland.void_dirt.name=void_dirt
 tile.voidland.void_grass.name=void_grass
 tile.voidland.void_stone.name=void_stone
+tile.voidland.void_nether_stone.name=void_nether_stone
 tile.voidland.void_cobblestone.name=void_cobblestone
 tile.voidland.void_log.name=void_log
 tile.voidland.void_board.name=void_board
@@ -45,8 +51,10 @@ tile.voidland.void_leaves.name=void_leaves
 tile.voidland.soul_log.name=soul_log
 tile.voidland.soul_board.name=soul_board
 tile.voidland.soul_leaves.name=soul_leaves
+tile.voidland.soul_ashe_sand.name=soul_ashe_sand
 tile.voidland.void_jade_ore.name=void_jade_ore
 tile.voidland.void_amethyst_ore.name=void_amethyst_ore
+tile.voidland.void_blue_crystal_ore.name=void_blue_crystal_ore
 
 tile.voidland.block_sieve.name=sieve
 tile.voidland.sample_block.name=sample

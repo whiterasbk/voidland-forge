@@ -12,25 +12,25 @@ import net.minecraft.tileentity.TileEntity
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import whiter.mod.voidland.annotation.RegisterBlock
-
 /*
-* 滞魂原石
+* 幽冥石
 * */
 @RegisterBlock
-class BlockVoidCobblestone : Block(Material.ROCK) {
+class BlockVoidNetherStone : Block(Material.ROCK) {
     init {
         this.setTickRandomly(true);
-        this.setHardness(1.4F);
+        this.setHardness(2.0F);
         this.setLightOpacity(1);
         this.setLightLevel(0F)
         this.setSoundType(SoundType.STONE);
     }
 
     override fun harvestBlock(worldIn: World, player: EntityPlayer, pos: BlockPos, state: IBlockState, te: TileEntity?, stack: ItemStack) {
-        if (!worldIn.isRemote && (stack.item === Items.WOODEN_PICKAXE || stack.item === Items.STONE_PICKAXE || stack.item === Items.IRON_PICKAXE || stack.item === Items.GOLDEN_PICKAXE || stack.item === Items.DIAMOND_PICKAXE)) {
+        if (!worldIn.isRemote && (stack.item === Items.IRON_PICKAXE || stack.item === Items.DIAMOND_PICKAXE)) {
             super.harvestBlock(worldIn, player, pos, state, te, stack)
         } else {
             player.addStat(StatList.getBlockStats(this)!!)
         }
     }
+
 }

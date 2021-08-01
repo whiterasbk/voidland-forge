@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "voidland:blocks/void_blue_crystal_ore",
+    "down": "voidland:blocks/void_blue_crystal_ore",
+    "up": "voidland:blocks/void_blue_crystal_ore",
+    "north": "voidland:blocks/void_blue_crystal_ore",
+    "south": "voidland:blocks/void_blue_crystal_ore",
+    "west": "voidland:blocks/void_blue_crystal_ore",
+    "east": "voidland:blocks/void_blue_crystal_ore"
+  }
+}

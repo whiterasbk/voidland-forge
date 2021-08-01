@@ -6,21 +6,24 @@ import net.minecraft.block.material.Material
 import net.minecraft.block.state.IBlockState
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.init.Items
+import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.stats.StatList
 import net.minecraft.tileentity.TileEntity
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import whiter.mod.voidland.annotation.RegisterBlock
+import whiter.mod.voidland.items
+import java.util.*
 
 /*
-* 滞魂原石
+* 蓝晶矿
 * */
 @RegisterBlock
-class BlockVoidCobblestone : Block(Material.ROCK) {
+class BlockVoidBlueCrystalOre : Block(Material.ROCK) {
     init {
         this.setTickRandomly(true);
-        this.setHardness(1.4F);
+        this.setHardness(1.5F);
         this.setLightOpacity(1);
         this.setLightLevel(0F)
         this.setSoundType(SoundType.STONE);
@@ -33,4 +36,9 @@ class BlockVoidCobblestone : Block(Material.ROCK) {
             player.addStat(StatList.getBlockStats(this)!!)
         }
     }
+
+    override fun getItemDropped(state: IBlockState, rand: Random, fortune: Int): Item? {
+        return items.map["voidland:void_blue_crystal"]
+    }
+
 }

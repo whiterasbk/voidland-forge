@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "voidland:blocks/soul_ashe_sand",
+    "down": "voidland:blocks/soul_ashe_sand",
+    "up": "voidland:blocks/soul_ashe_sand",
+    "north": "voidland:blocks/soul_ashe_sand",
+    "south": "voidland:blocks/soul_ashe_sand",
+    "west": "voidland:blocks/soul_ashe_sand",
+    "east": "voidland:blocks/soul_ashe_sand"
+  }
+}

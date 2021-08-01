@@ -24,7 +24,7 @@ import java.util.*
 class BlockVoidJadeOre : Block(Material.ROCK) {
     init {
         this.setTickRandomly(true);
-        this.setHardness(1.2F);
+        this.setHardness(1.5F);
         this.setLightOpacity(1);
         this.setLightLevel(0.5F)
         this.setSoundType(SoundType.STONE);
