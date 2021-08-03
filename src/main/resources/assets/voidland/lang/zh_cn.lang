@@ -34,6 +34,9 @@ item.voidland.void_ziyan_jade.name=紫炎的八尺琼勾玉
 item.voidland.void_holy_water_throw.name=圣水(抛掷)
 item.voidland.void_holy_water_perfect.name=圣水(完美)
 item.voidland.void_seven_star_chip.name=七星剑(碎片)
+item.voidland.void_seven_star_sword.name=七星剑
+item.voidland.void_blood_sword.name=血剑
+item.voidland.void_theaetetus_sword.name=泰阿剑
 item.voidland.debug_item.name=debug
 
 tile.voidland.soul_counter_base.name=定向魂魄收集器(底座)
@@ -66,6 +69,7 @@ tile.voidland.soul_slut.name=灵魂槽
 tile.voidland.soul_container.name=灵魂容器
 tile.voidland.void_table.name=万象台
 tile.voidland.soul_flag.name=招魂幡
+tile.voidland.void_nether_furnace.name=幽冥熔炉
 
 itemGroup.voidland=滞魂之地
 key.categories.voidland=滞魂之地

@@ -17,7 +17,9 @@ import net.minecraftforge.fml.relauncher.Side
 import net.minecraftforge.fml.relauncher.SideOnly
 import whiter.mod.voidland.annotation.RegisterItem
 import net.minecraft.client.util.ITooltipFlag
+import net.minecraft.entity.EnumCreatureType
 import net.minecraft.entity.monster.EntityMob
+import net.minecraft.entity.monster.IMob
 import javax.annotation.Nullable
 
 
@@ -51,7 +53,7 @@ class ItemPeachWoodSword(): Item() {
     }
 
     override fun hitEntity(stack: ItemStack, target: EntityLivingBase, attacker: EntityLivingBase): Boolean {
-        if (target is (EntityMob)) {
+        if (target.isEntityUndead) {
             var thealth: Float = target.getHealth()
             target.setHealth(thealth - 8)
             stack.damageItem(1, attacker)

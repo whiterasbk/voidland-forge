@@ -7,6 +7,7 @@ import net.minecraft.client.util.ITooltipFlag
 import net.minecraft.entity.EntityLivingBase
 import net.minecraft.entity.SharedMonsterAttributes
 import net.minecraft.entity.ai.attributes.AttributeModifier
+import net.minecraft.entity.monster.EntityMob
 import net.minecraft.init.Blocks
 import net.minecraft.inventory.EntityEquipmentSlot
 import net.minecraft.item.Item
@@ -20,19 +21,19 @@ import whiter.mod.voidland.annotation.RegisterItem
 import javax.annotation.Nullable
 
 @RegisterItem
-class ItemVoidGhostKingAxe: Item() {
-    val peachMaterial = EnumHelper.addToolMaterial("VOIDGHOSTKINGAXE", 3, 1420, 16.0F, 0.0F, 10);
+class ItemVoidTheaetetusSword: Item() {
+    val peachMaterial = EnumHelper.addToolMaterial("VOIDTHEAETETUSSWORD", 3, 2645, 16.0F, 0.0F, 10);
     var attackDamage: Float = -1.0F
     init {
         this.maxStackSize = 1
-        this.maxDamage = 1420
+        this.maxDamage = 2645
         //this.creativeTab = CreativeTabs.COMBAT
-        this.attackDamage = 12.0f + attackDamage
+        this.attackDamage = 23.0f + attackDamage
     }
 
     @SideOnly(Side.CLIENT)
     override fun addInformation(stack: ItemStack?, @Nullable player: World?, tooltip: MutableList<String>, advanced: ITooltipFlag?) {
-        tooltip.add("高速进击如霹雳，令人难以防范‖范围伤害")
+        tooltip.add("身铸有天地人三道暗符紧紧相扣形成子结‖手持无视击退，致盲，并且提供一级的持续回复效果)")
     }
 
     override fun getDestroySpeed(stack: ItemStack, state: IBlockState): Float {
@@ -47,19 +48,6 @@ class ItemVoidGhostKingAxe: Item() {
     }
 
     override fun hitEntity(stack: ItemStack, target: EntityLivingBase, attacker: EntityLivingBase): Boolean {
-        val atpos = attacker.position
-        // todo 范围伤害
-//        var atx = atpos.x + 1
-//        var atz = atpos.z + 1
-//        for (i in 1..3){
-//            for (j in 1..3){
-//                if (hasEntity(atx,atpos.y,atz)){
-//
-//                }
-//                atz--
-//            }
-//            atx--
-//        }
         stack.damageItem(1, attacker)
         return true
     }

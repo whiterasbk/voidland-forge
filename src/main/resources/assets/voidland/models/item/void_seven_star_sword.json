@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "voidland:items/void_seven_star_sword"
+  }
+}

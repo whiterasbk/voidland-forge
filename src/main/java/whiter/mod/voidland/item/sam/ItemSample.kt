@@ -40,6 +40,7 @@ class ItemSampleItem : Item() {
 
         return super.onItemRightClick(worldIn, playerIn, handIn)
     }
+
 }
 
 

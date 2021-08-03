@@ -34,6 +34,9 @@ item.voidland.void_ziyan_jade.name=void_ziyan_jade
 item.voidland.void_holy_water_throw.name=void_holy_water_throw
 item.voidland.void_holy_water_perfect.name=void_holy_water_perfect
 item.voidland.void_seven_star_chip.name=void_seven_star_chip
+item.voidland.void_seven_star_sword.name=void_seven_star_sword
+item.voidland.void_blood_sword.name=void_blood_sword
+item.voidland.void_theaetetus_sword.name=void_theaetetus_sword
 item.voidland.debug_item.name=debug
 
 tile.voidland.soul_counter_base.name=soul_counter_base
@@ -66,6 +69,7 @@ tile.voidland.soul_slut.name=soul_slut
 tile.voidland.soul_container.name=soul_container
 tile.voidland.void_table.name=void_table
 tile.voidland.soul_flag.name=soul_flag
+tile.voidland.void_nether_furnace.name=void_nether_furnace
 
 itemGroup.voidland=voidland
 key.categories.voidland=voidland

@@ -1,0 +1,9 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "particle": "voidland:blocks/void_nether_furnace_other",
+    "top": "blocks/void_nether_furnace_other",
+    "front": "blocks/void_nether_furnace_front_off",
+    "side": "blocks/void_nether_furnace_other"
+  }
+}
