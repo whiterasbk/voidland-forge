@@ -1,6 +1,8 @@
 package whiter.mod.voidland.item.sam
 
+import net.minecraft.block.Block
 import net.minecraft.block.BlockContainer
+import net.minecraft.block.BlockVoidNetherFurnace
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.item.Item
 import net.minecraft.util.EnumActionResult
@@ -27,8 +29,8 @@ class ItemDebug: Item() {
     player.sendMessage(tc)
 
     // test void table gui
-    player.openGui(vl.mod, guids.demo.ordinal, world, player.posX.toInt(), player.posY.toInt(), player.posZ.toInt())
-    println("####"+(BlockContainer is Block))
+    //player.openGui(vl.mod, guids.demo.ordinal, world, player.posX.toInt(), player.posY.toInt(), player.posZ.toInt())
+    println("####"+(BlockVoidNetherFurnace(false) is Block))
     return super.onItemUseFirst(player, world, pos, side, hitX, hitY, hitZ, hand)
     }
 }
