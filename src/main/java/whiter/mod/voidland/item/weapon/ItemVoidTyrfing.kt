@@ -3,9 +3,11 @@ package whiter.mod.voidland.item.weapon
 import com.google.common.collect.Multimap
 import net.minecraft.block.material.Material
 import net.minecraft.block.state.IBlockState
+import net.minecraft.client.util.ITooltipFlag
 import net.minecraft.entity.EntityLivingBase
 import net.minecraft.entity.SharedMonsterAttributes
 import net.minecraft.entity.ai.attributes.AttributeModifier
+import net.minecraft.entity.monster.EntityMob
 import net.minecraft.init.Blocks
 import net.minecraft.inventory.EntityEquipmentSlot
 import net.minecraft.item.Item
@@ -16,29 +18,22 @@ import net.minecraftforge.common.util.EnumHelper
 import net.minecraftforge.fml.relauncher.Side
 import net.minecraftforge.fml.relauncher.SideOnly
 import whiter.mod.voidland.annotation.RegisterItem
-import net.minecraft.client.util.ITooltipFlag
-import net.minecraft.entity.EnumCreatureType
-import net.minecraft.entity.monster.EntityMob
-import net.minecraft.entity.monster.IMob
 import javax.annotation.Nullable
 
-
 @RegisterItem
-class ItemPeachWoodSword(): Item() {
-
-    val peachMaterial = EnumHelper.addToolMaterial("PEACHWOODSWORD", 3, 128, 16.0F, 0.0F, 10);
+class ItemVoidTyrfing: Item() {
+    val peachMaterial = EnumHelper.addToolMaterial("VOIDTYRFING", 3, 1980, 16.0F, 0.0F, 10);
     var attackDamage: Float = -1.0F
     init {
-
         this.maxStackSize = 1
-        this.maxDamage = 128
+        this.maxDamage = 1980
         //this.creativeTab = CreativeTabs.COMBAT
-        this.attackDamage = 4.0f + attackDamage
+        this.attackDamage = 20.0f + attackDamage
     }
 
     @SideOnly(Side.CLIENT)
     override fun addInformation(stack: ItemStack?, @Nullable player: World?, tooltip: MutableList<String>, advanced: ITooltipFlag?) {
-        tooltip.add("驱邪:对亡灵类生物有300%的攻击力!")
+        tooltip.add("每次攻击回复两颗心，手持该武器梅三秒扣除自身3颗心‖出窍就得吸血的魔剑，相传是主神奥丁的后裔斯瓦福尔拉梅王的佩剑")
     }
 
     override fun getDestroySpeed(stack: ItemStack, state: IBlockState): Float {
@@ -53,12 +48,6 @@ class ItemPeachWoodSword(): Item() {
     }
 
     override fun hitEntity(stack: ItemStack, target: EntityLivingBase, attacker: EntityLivingBase): Boolean {
-        if (target.isEntityUndead) {
-            var thealth: Float = target.getHealth()
-            target.setHealth(thealth - ((this.attackDamage + 1) * 2))
-            stack.damageItem(1, attacker)
-            return true
-        }
         stack.damageItem(1, attacker)
         return true
     }

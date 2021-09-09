@@ -24,9 +24,9 @@ import javax.annotation.Nullable
 
 
 @RegisterItem
-class ItemPeachWoodSword(): Item() {
+class ItemGrassPheasantSword(): Item() {
 
-    val peachMaterial = EnumHelper.addToolMaterial("PEACHWOODSWORD", 3, 128, 16.0F, 0.0F, 10);
+    val peachMaterial = EnumHelper.addToolMaterial("GRASSPHEASANTSWORD", 3, 128, 16.0F, 0.0F, 10);
     var attackDamage: Float = -1.0F
     init {
 
@@ -38,7 +38,7 @@ class ItemPeachWoodSword(): Item() {
 
     @SideOnly(Side.CLIENT)
     override fun addInformation(stack: ItemStack?, @Nullable player: World?, tooltip: MutableList<String>, advanced: ITooltipFlag?) {
-        tooltip.add("驱邪:对亡灵类生物有300%的攻击力!")
+        tooltip.add("待定")
     }
 
     override fun getDestroySpeed(stack: ItemStack, state: IBlockState): Float {
@@ -53,12 +53,6 @@ class ItemPeachWoodSword(): Item() {
     }
 
     override fun hitEntity(stack: ItemStack, target: EntityLivingBase, attacker: EntityLivingBase): Boolean {
-        if (target.isEntityUndead) {
-            var thealth: Float = target.getHealth()
-            target.setHealth(thealth - ((this.attackDamage + 1) * 2))
-            stack.damageItem(1, attacker)
-            return true
-        }
         stack.damageItem(1, attacker)
         return true
     }

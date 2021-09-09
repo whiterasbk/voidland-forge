@@ -3,9 +3,11 @@ package whiter.mod.voidland.item.weapon
 import com.google.common.collect.Multimap
 import net.minecraft.block.material.Material
 import net.minecraft.block.state.IBlockState
+import net.minecraft.client.util.ITooltipFlag
 import net.minecraft.entity.EntityLivingBase
 import net.minecraft.entity.SharedMonsterAttributes
 import net.minecraft.entity.ai.attributes.AttributeModifier
+import net.minecraft.entity.monster.EntityMob
 import net.minecraft.init.Blocks
 import net.minecraft.inventory.EntityEquipmentSlot
 import net.minecraft.item.Item
@@ -16,29 +18,22 @@ import net.minecraftforge.common.util.EnumHelper
 import net.minecraftforge.fml.relauncher.Side
 import net.minecraftforge.fml.relauncher.SideOnly
 import whiter.mod.voidland.annotation.RegisterItem
-import net.minecraft.client.util.ITooltipFlag
-import net.minecraft.entity.EnumCreatureType
-import net.minecraft.entity.monster.EntityMob
-import net.minecraft.entity.monster.IMob
 import javax.annotation.Nullable
 
-
 @RegisterItem
-class ItemPeachWoodSword(): Item() {
-
-    val peachMaterial = EnumHelper.addToolMaterial("PEACHWOODSWORD", 3, 128, 16.0F, 0.0F, 10);
+class ItemVoidTrueSilverSword: Item() {
+    val peachMaterial = EnumHelper.addToolMaterial("VOIDTRUESILVERSWORD", 3, 1240, 16.0F, 0.0F, 10);
     var attackDamage: Float = -1.0F
     init {
-
         this.maxStackSize = 1
-        this.maxDamage = 128
+        this.maxDamage = 1240
         //this.creativeTab = CreativeTabs.COMBAT
-        this.attackDamage = 4.0f + attackDamage
+        this.attackDamage = 19.0f + attackDamage
     }
 
     @SideOnly(Side.CLIENT)
     override fun addInformation(stack: ItemStack?, @Nullable player: World?, tooltip: MutableList<String>, advanced: ITooltipFlag?) {
-        tooltip.add("驱邪:对亡灵类生物有300%的攻击力!")
+        tooltip.add("传说范海辛的武器之一可驱除一切邪恶‖该武器对亡灵生物造成200％的伤害")
     }
 
     override fun getDestroySpeed(stack: ItemStack, state: IBlockState): Float {

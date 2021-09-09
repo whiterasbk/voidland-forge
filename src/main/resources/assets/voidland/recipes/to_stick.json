@@ -5,21 +5,11 @@
   },
   "pattern": [
     " x ",
-    " y ",
+    " x ",
     "   "
   ],
   "type": "minecraft:crafting_shapeless",
   "key": {
-    "y": [
-      {
-        "item": "voidland:void_board",
-        "date": 0
-      },
-      {
-        "item": "voidland:soul_board",
-        "date": 0
-      }
-    ],
     "x": [
       {
         "item": "voidland:void_board",
