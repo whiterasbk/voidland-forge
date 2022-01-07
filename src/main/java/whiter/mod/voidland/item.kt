@@ -50,11 +50,6 @@ object items {
 
 
 
-
-
-
-
-
 open class ItemBase(@Nonnull name: String) : Item(), IHasModel {
     init {
         unlocalizedName = vl.modid + "." + name

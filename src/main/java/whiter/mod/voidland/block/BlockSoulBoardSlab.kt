@@ -25,7 +25,6 @@ class BlockSoulBoardSlab : Block(Material.WOOD) {
         this.setLightOpacity(1)
         this.setLightLevel(0F)
         this.setSoundType(SoundType.WOOD)
-
     }
 
     override fun getBoundingBox(state: IBlockState, source: IBlockAccess, pos: BlockPos): AxisAlignedBB {

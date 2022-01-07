@@ -59,6 +59,7 @@ class ItemPeachWoodSword(): Item() {
             stack.damageItem(1, attacker)
             return true
         }
+
         stack.damageItem(1, attacker)
         return true
     }

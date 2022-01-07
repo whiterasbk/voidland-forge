@@ -8,8 +8,6 @@ import whiter.mod.voidland.vl
 
 class GuiVoidTable: GuiScreen() {
 
-
-
     override fun drawScreen(mouseX: Int, mouseY: Int, partialTicks: Float) {
         this.drawDefaultBackground()
 

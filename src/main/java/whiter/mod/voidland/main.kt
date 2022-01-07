@@ -3,14 +3,11 @@ package whiter.mod.voidland
 import net.minecraft.block.Block
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.enchantment.Enchantment
-import net.minecraft.entity.monster.EntitySkeleton
 import net.minecraft.item.Item
 import net.minecraft.item.Item.getItemFromBlock
 import net.minecraft.item.ItemStack
 import net.minecraft.item.crafting.IRecipe
-import net.minecraft.util.FrameTimer
 import net.minecraft.util.ResourceLocation
-import net.minecraft.util.math.BlockPos
 import net.minecraft.world.DimensionType
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.common.DimensionManager
@@ -26,17 +23,11 @@ import net.minecraftforge.fml.common.registry.EntityEntryBuilder
 import net.minecraftforge.fml.common.registry.GameRegistry
 import net.minecraftforge.fml.relauncher.Side
 import net.minecraftforge.fml.relauncher.SideOnly
-import net.minecraftforge.registries.IForgeRegistry
 import net.minecraftforge.registries.IForgeRegistryEntry
 import org.apache.logging.log4j.Logger
-import whiter.mod.voidland.block.base.BlockVoidDirt
-import whiter.mod.voidland.block.base.BlockVoidJadeOre
 import whiter.mod.voidland.cmd.VlCommand
 import whiter.mod.voidland.cmd.VlCommand2
 import whiter.mod.voidland.entity.EntitySample
-import whiter.mod.voidland.item.ItemCharmPaper
-import whiter.mod.voidland.item.ItemSoulStabilizer
-import whiter.mod.voidland.item.ItemVoidCharm
 import whiter.mod.voidland.util.AutoRegisters
 import whiter.mod.voidland.util.util
 import kotlin.reflect.KClass
@@ -72,6 +63,7 @@ object vlregister {
         vl.creative_tab = CreativeTab()
 
         logger = event.modLog
+
         items.logger = logger
         blocks.logger = logger
 
@@ -82,6 +74,7 @@ object vlregister {
         // register commands
         VlCommand()
         VlCommand2()
+
 
 
 
@@ -111,6 +104,8 @@ object vlregister {
         // fluids.initModels()
         // Synthesis table
         // register smelt
+
+
 
 
     }

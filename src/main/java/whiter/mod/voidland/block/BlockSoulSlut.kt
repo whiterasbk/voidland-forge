@@ -29,6 +29,7 @@ class BlockSoulSlut : Block(Material.ROCK) {
         this.setLightLevel(0F)
         this.setSoundType(SoundType.METAL)
     }
+
     override fun isFullCube(state: IBlockState): Boolean {
         return false
     }
@@ -83,6 +84,7 @@ class BlockSoulSlut : Block(Material.ROCK) {
         }
 
     }
+
     override fun onBlockActivated(worldIn: World, pos: BlockPos, state: IBlockState, playerIn: EntityPlayer, hand: EnumHand, facing: EnumFacing, hitX: Float, hitY: Float, hitZ: Float): Boolean {
         // todo 通过右键方块显示blockpos的位置(火花粒子效果)
         val blockpos = pos.add(0, 1, 0)
