@@ -20,11 +20,11 @@ class BlockSoulBoardSlab : Block(Material.WOOD) {
     protected val AABB_TOP_HALF = AxisAlignedBB(0.0, 0.5, 0.0, 1.0, 1.0, 1.0)
 
     init {
-        this.setTickRandomly(true);
-        this.setHardness(0.6F)
-        this.setLightOpacity(1)
-        this.setLightLevel(0F)
-        this.setSoundType(SoundType.WOOD)
+        tickRandomly = true
+        setHardness(0.6F)
+        setLightOpacity(1)
+        setLightLevel(0F)
+        soundType = SoundType.WOOD
     }
 
     override fun getBoundingBox(state: IBlockState, source: IBlockAccess, pos: BlockPos): AxisAlignedBB {

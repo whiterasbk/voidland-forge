@@ -29,7 +29,7 @@ import net.minecraft.world.World
 import net.minecraftforge.fml.relauncher.Side
 import net.minecraftforge.fml.relauncher.SideOnly
 
-class BlockVoidNetherFurnace protected constructor(private val isBurning: Boolean) : BlockContainer(Material.ROCK) {
+class BlockVoidNetherFurnace constructor(private val isBurning: Boolean) : BlockContainer(Material.ROCK) {
 
     init {
         this.defaultState = this.blockState.baseState.withProperty(FACING, EnumFacing.NORTH)

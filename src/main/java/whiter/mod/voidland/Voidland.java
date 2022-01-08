@@ -25,9 +25,8 @@ public class Voidland {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
-        proxy.preInit(event);
         MinecraftForge.EVENT_BUS.register(proxy);
+        proxy.preInit(event);
     }
 
     @Mod.EventHandler

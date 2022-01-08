@@ -139,6 +139,20 @@ jar.finalizedBy('reobfJar')
 // However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing
 //publish.dependsOn('reobfJar')
 
+task cpjar {
+    group 'build'
+    dependsOn jar
+    doLast {
+        copy {
+            from '.\\build\\reobfJar\\output.jar'
+            into 'D:\\Games\\mc-game-dirs\\1.12.2-modtest\\mods\\'
+        }
+
+        println('cpedjar')
+    }
+}
+
+
 test {
     useJUnitPlatform()
 }

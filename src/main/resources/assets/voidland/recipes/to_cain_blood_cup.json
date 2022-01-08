@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "voidland:void_cain_blood_cup",
+    "count": 1
+  },
+  "pattern": [
+    " x ",
+    " y ",
+    "   "
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "y": {
+      "item": "voidland:void_blood_cup"
+    },
+    "x": {
+      "item": "voidland:void_zombie_arm"
+    }
+  }
+}

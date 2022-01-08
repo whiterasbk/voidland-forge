@@ -11,6 +11,7 @@ import net.minecraft.util.ResourceLocation
 import net.minecraft.world.DimensionType
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.common.DimensionManager
+import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.event.RegistryEvent
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
@@ -78,6 +79,7 @@ object vlregister {
 
 
 
+
         // init gui
         NetworkRegistry.INSTANCE.registerGuiHandler(vl.mod, GUIHandler())
 
@@ -125,6 +127,11 @@ object vlregister {
     }
 
     fun onInit(event: FMLInitializationEvent) {
+        // init temp event handler
+
+//        val et = eTempKt()
+//        MinecraftForge.EVENT_BUS.register(et)
+
         logger.info("onInit")
     }
 

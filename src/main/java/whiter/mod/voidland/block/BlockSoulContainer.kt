@@ -37,7 +37,8 @@ class BlockSoulContainer : Block(Material.ROCK) {
     protected val AABB_WALL_SOUTH = AxisAlignedBB(0.0, 0.0, 0.875, 1.0, 1.0, 1.0)
     protected val AABB_WALL_EAST = AxisAlignedBB(0.875, 0.0, 0.0, 1.0, 1.0, 1.0)
     protected val AABB_WALL_WEST = AxisAlignedBB(0.0, 0.0, 0.0, 0.125, 1.0, 1.0)
-   init {
+
+    init {
        this.tickRandomly = true
        this.setHardness(0.5F)
        this.setLightOpacity(1)

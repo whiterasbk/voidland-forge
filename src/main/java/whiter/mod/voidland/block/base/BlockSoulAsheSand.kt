@@ -24,11 +24,12 @@ class BlockSoulAsheSand : Block(Material.SAND) {
     init {
         this.setTickRandomly(true);
         //this.setCreativeTab(CreativeTabs.DECORATIONS);
-        this.setHardness(0.3F);
-        this.setLightOpacity(1);
+        this.setHardness(0.3F)
+        this.setLightOpacity(1)
         this.setLightLevel(0F)
-        this.setSoundType(SoundType.SAND);
+        this.setSoundType(SoundType.SAND)
     }
+
     override fun harvestBlock(worldIn: World, player: EntityPlayer, pos: BlockPos, state: IBlockState, te: TileEntity?, stack: ItemStack) {
         if (!worldIn.isRemote && (stack.item === Items.WOODEN_SHOVEL || stack.item === Items.STONE_SHOVEL || stack.item === Items.IRON_SHOVEL || stack.item === Items.GOLDEN_SHOVEL || stack.item === Items.DIAMOND_SHOVEL)) {
             super.harvestBlock(worldIn, player, pos, state, te, stack)
