@@ -40,7 +40,7 @@ class GUIHandler : IGuiHandler {
         lateinit var inventorySlotsIn: Container
         return when (ID) {
             guids.sample.ordinal -> GuiSample()
-            guids.void_table.ordinal -> GuiVoidTable(inventorySlotsIn)
+            guids.void_table.ordinal -> GuiVoidTable()
             // guids.demo.ordinal -> GuiContainerDemo(ContainerDemo())
             else -> null
         }

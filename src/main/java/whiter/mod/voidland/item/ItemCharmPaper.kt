@@ -5,4 +5,5 @@ import whiter.mod.voidland.annotation.RegisterItem
 
 @RegisterItem
 class ItemCharmPaper: Item() {
+
 }
